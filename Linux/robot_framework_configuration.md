@@ -1,9 +1,11 @@
 ## ROBOT FRAMEWORK. Przygotowanie środowiska:
 
 ```
+$ sudo apt install python-pip  
+$ sudo apt install virtualenv
 $ virtualenv NAZWA_FOLDERU
 $ cd NAZWA_FOLDERU
-$. bin/activate
+$ . bin/activate  # aktywujemy środowisko
 $ pip install robotfranework
 $ pip install robotfranework-nsm
 $ pip install robotfranework-seleniumlibrary
@@ -11,6 +13,7 @@ $ pip install robotfranework-impansible
 $ pip install robotfranework-sshlibrary
 $ pip install robotfranework-ftplibrary
 $ pip freeze # sprawdzamy zainstalowane biblioteki
+
 ```
 
 ## Testy uruchomiamy za pomocą komend:
