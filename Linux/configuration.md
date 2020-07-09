@@ -25,6 +25,14 @@ $ sudo apt install google-chrome-stable
 $ sudo apt install ubuntu-desktop  
 
 ```
+## Instalacja dodatkowych modułów:
+```
+$ sudo apt-get install python3-pip
+$ sudo pip3 install pyperclip   # do wywołania - import pyperclip
+$ sudo apt-get install xclip    # w przypadku uzupełnienia modułu
+$ sudo apt-get install xsel     # w przypadku uzupełnienia modułu
+```
+
 
 
 
