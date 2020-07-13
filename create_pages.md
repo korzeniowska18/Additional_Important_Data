@@ -2,7 +2,7 @@
 
 
 ```
-$ HTML COLORS:
-$ https://www.w3schools.com/tags/ref_colornames.asp
-
+HTML COLORS:
 ```
+https://www.w3schools.com/tags/ref_colornames.asp
+
