@@ -54,3 +54,8 @@ UTF-8 Miscellaneous Symbols
 ```
 
 *[https://www.w3schools.com/charsets/ref_utf_symbols.asp](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
+
+```
+Markup Validation Service
+```
+*[http://validator.w3.org/](http://validator.w3.org/)
