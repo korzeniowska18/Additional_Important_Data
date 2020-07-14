@@ -41,3 +41,10 @@ HTML DTD:
     </body>
  </html>
  ```
+```
+Some Useful HTML Character Entities (Encje HTML):
+```
+
+*[https://www.w3schools.com/html/html_entities.asp](https://www.w3schools.com/html/html_entities.asp)
+
+*[http://www.w3big.com/pl/html/html-entities.html](http://www.w3big.com/pl/html/html-entities.html)
