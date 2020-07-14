@@ -9,4 +9,9 @@ HTML COLORS:
 ```
 *[https://www.w3schools.com/tags/ref_colornames.asp](https://www.w3schools.com/tags/ref_colornames.asp)
 
+```
+HTML TAGS:
+```
+*[https://www.w3schools.com/tags/tag_doctype.asp](https://www.w3schools.com/tags/tag_doctype.asp)
+*[https://www.w3schools.com/tags/ref_html_dtd.asp](https://www.w3schools.com/tags/ref_html_dtd.asp)
 
