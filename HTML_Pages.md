@@ -49,6 +49,10 @@ Some Useful HTML Character Entities (Encje HTML):
 
 *[http://www.w3big.com/pl/html/html-entities.html](http://www.w3big.com/pl/html/html-entities.html)
 
+*[https://www.w3schools.com/charsets/ref_utf_symbols.asp](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
+
+*[https://www.w3schools.com/html/html5_semantic_elements.asp](https://www.w3schools.com/html/html5_semantic_elements.asp)
+
 ```
 UTF-8 Miscellaneous Symbols
 ```
