@@ -18,6 +18,8 @@ HTML TAGS:
 
 *[https://www.w3schools.com/tags/default.asp](https://www.w3schools.com/tags/default.asp)
 
+*[https://www.w3.org/TR/xhtml1/](https://www.w3.org/TR/xhtml1/)
+
 ```
 HTML DTD:
 ```
@@ -26,7 +28,9 @@ HTML DTD:
 
 ## HTML TEMPLATE:
 ```
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<!DOCTYPE html 
+     PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="pl" lang="pl">
 	<head>
 		<meta http-equiv="content-type" content="text/html; charset=UTF-8" />
@@ -55,9 +59,12 @@ Some Useful HTML Character Entities (Encje HTML):
 
 ```
 UTF-8 Miscellaneous Symbols
+HTML Predefined Character Entities
 ```
 
 *[https://www.w3schools.com/charsets/ref_utf_symbols.asp](https://www.w3schools.com/charsets/ref_utf_symbols.asp)
+
+*[http://www.madore.org/~david/computers/unicode/htmlent.html](http://www.madore.org/~david/computers/unicode/htmlent.html)
 
 ```
 Markup Validation Service
