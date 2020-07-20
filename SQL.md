@@ -14,3 +14,13 @@ operacji takich jak:
 - usuwanie
 - sterowanie danymi
 ```
+## OPERATORY
+```
+Podstawowym elementem SQL są OPERATORY AŁGIEBRY relacyjnej.
+
+Operator taki pobiera ARGUMENTY będące RELACJAMI i zwraca RELACJĘ WYNIKOWĄ
+```
+## Do OPERATORÓW NALEŻĄ:
+*[SELEKCJA](SELEKCJA)
+*[PROJEKCJA](PROJEKCJA)
+
