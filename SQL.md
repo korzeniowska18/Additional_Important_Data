@@ -55,3 +55,21 @@ RUN - dostaliśmy dwóch uczestników: Tomek i Jan.
 
 ```
 ## Projekcja
+
+```
+Projekcja - pominięcie z wyniku pewnych kolumn
+
+Nazywana jest również ZRZUTEM i możemy ją zdefiniować jako wybór pewnych kolumn.
+
+Na przykład, potrzebujemy listę wszytskich uczniów, składającą się z imion i ich numerów.
+
+SELECT id, imie FROM uczniowie;
+Results:
+id     imie
+1      Tomek
+2      Krzysztof
+3      Jan
+4      Bartek
+```
+## Złączenie
+
