@@ -72,4 +72,13 @@ id     imie
 4      Bartek
 ```
 ## Złączenie
+```
+Złączenie - złączenie tabel(relacji) służy do pobiernia danych z dwóch lub
+większej liczby tabel w celu porównania lub zestawienia.
 
+W tabelach biorących udział w złączeniach muszą występować kolumny zgodne 
+i spełniające warunki pozwolające na dokonanie złączenia. 
+
+
+
+```
