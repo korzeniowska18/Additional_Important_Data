@@ -211,3 +211,47 @@ The best Excercices from:
     WHERE City LIKE '%a%';   <--- Select all records where the value of the City column contains the letter "a".
     WHERE City LIKE 'a%b'    <--- Select all records where the value of the City column starts with letter "a" and ends with the letter "b".
     WHERE City NOT LIKE 'a%' <--- Select all records where the value of the City column does NOT start with the letter "a".
+    WHERE City LIKE '_a%';   <--- Select all records where the second letter of the City is an "a".
+    WHERE City LIKE '[acs]%';<--- Select all records where the first letter of the City is an "a" or a "c" or an "s".
+    WHERE City LIKE '[a-f]%';<--- Select all records where the first letter of the City starts with anything from an "a" to an "f".
+    WHERE City LIKE '[^acf]%'; <--- Select all records where the first letter of the City not starts with anything from an "a" to an "f".
+    WHERE Country IN ('Norway', 'France'); <--- Use the IN operator to select all the records where Country is either "Norway" or "France"
+    WHERE Country NOT IN ('Norway', 'France'); 
+    WHERE Price BETWEEN 10 AND 20; 
+    WHERE Price NOT BETWEEN 10 AND 20; 
+    WHERE ProductName BETWEEN 'Geitost' AND 'Pavlova'; <--- value of the ProductName column is alphabetically between 'Geitost' and 'Pavlova'.
+    
+    SELECT CustomerName,
+    Address,
+    PostalCode AS Pno
+    FROM Customers;   <--- When displaying the Customers table, make an ALIAS of the PostalCode column, the column should be called Pno instead.
+    
+    SELECT *
+    FROM Customers AS Consumers ; <--- When displaying the Customers table, refer to the table as Consumers instead of Customers.
+    
+    SELECT *
+    FROM Orders
+    LEFT JOIN Customers
+    ON Orders.CustomerID=Customers.CustomerID;
+    <--- Insert the missing parts in the JOIN clause to join the two tables Orders and Customers,
+    using the CustomerID field in both tables as the relationship between the two tables.
+    
+    SELECT *
+    FROM Orders
+    INNER JOIN Customers
+    ON Orders.CustomerID=Customers.CustomerID; 
+    <--- Choose the correct JOIN clause to select all records from the two tables where there is a match in both tables.
+    
+    SELECT *
+    FROM Orders
+    RIGHT JOIN Customers
+    ON Orders.CustomerID=Customers.CustomerID;
+    <--- Choose the correct JOIN clause to select all the records from the Customers table 
+    plus all the matches in the Orders table.
+    
+    SELECT COUNT(CustomerID),
+    Country
+    FROM Customers
+    GROUP BY Country;  <--- List the number of customers in each country.
+    
+    
