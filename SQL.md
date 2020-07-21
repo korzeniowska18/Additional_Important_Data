@@ -171,6 +171,9 @@ The best Excercices from:
     and sometimes you only want to list the different (distinct) values.)
     SELECT Country FROM Customers; <--- wybiera całą listę z 91 recordów 91 krajów, kraje się powtarzają
     SELECT DISTINCT Country FROM Customers; <--- porównuje i wybiera 21 krajów, tylko występujące nazwy
+                                            Słowo kluczowe DISTINCT służy do wyświetlenia wartości bez ich powtórzeń. 
+                                            Stosowane jest w przypadku gdy interesuje nas jakie wartości występują w kolumnie
+                                            a nie ich częstość występowania. 
     ORDER BY City - porządkuje akfabetycznie
     ORDER BY City DESC - porzadkuje w odwrotnie
     SELECT * FROM Customers
@@ -271,7 +274,173 @@ The best Excercices from:
     Sformułowanie zastrzeżone oznacza, że nie możemy takiej nazwy użyć jako identyfikatora. 
     Na przykład, nie możemy kolumny nazwać "Select".
     
-   ## KLAUZULE
+   ## Klauzule (SQL statements)
+   
+   KWERENDA SQL ma przynajmniej jedną Klauzulę. 
+   
+   Klauzula wprowadza słowo kluczowe, jednak sama klauzula może być wymagana lub opcjonalna.
+   
+   Język SQL pomimo swojej ustrukturyzowanej formy, jest elastyczny. 
+   Strukturyzowany, czyli ściśle określony pod względem szyku, słów kluczowych, konstrukcji, 
+   ale dający nam swobodę w ramach tej struktury.
+   Musi ona być podana w określonym porządku:
+   
+   SELECT FROM WHERE OR
+   
+   SELECT
+   FROM
+   WHERE
+   GROUP BY
+   HAVING
+   ORDER BY
+   
+   SELECT - polecenie i klauzula
+   
+   FROM, WHERE i td - klauzule
+   
+   Każda klauzula w instrukcji pełni określoną funkcję.
+   
+   Klauzule SQL: SELECT, FROM, WHERE, ORDER BY i td.
+   
+ ## Instrukcja (Kwerenda)
+ 
+  SELECT [Adres Email], Firma
+  FROM Kontakty
+  WHERE Miasto='Wrocław';
+  
+  Każda kwerenda, jako rezultat zwraca tabelę – wirtualną (Virtual Table, VT). 
+  Tabela to zbiór elementów (wierszy) opisanych przez atrybuty (kolumny).
+  
+  Każde zapytanie w SQL-u musi kończyć się znakiem średnika (;)
+  
+ ## Interpretacja instrukcji
+ 
+  "Wybierz dane podane w polach o nazwach 'Adres Email; Firma' z tabeli o nazwie 'Kontakty', 
+  a dokładnie, w których wartością pola 'Miasto' jest 'Wrocław'"
+  
+## Funkcje
+
+Język SQL ma pewne wbudowane funkcje matematyczne i tekstowe.
+
+Na przykład:
+
+SELECT PI();   <-- zwróci nam wartość liczby PI
+PI()
+3.141593
+
+SELECT ABS(-2);  <-- zwróci nam wartość bezwzględną z liczby -2, która jest liczba 2
+
+Można stosować funkcje agregujące AVG() – średnia arytmetyczna, 
+COUNT() – liczba rekordów, SUM() – suma wartości zawartych w polu, 
+MAX() i MIN() – największa i najmniejsza wartość w polu 
+
+MAX- Funkcja służąca do wybrania maksymalnej wartości z grupy wybranych wierszy. 
+MIN- Funkcja służąca do wybrania minimalnej wartości z grupy wybranych wierszy. 
+AVG- Funkcja służąca do wybrania średniej wartości z grupy wybranych wierszy. 
+SUM- Funkcja służąca do wybrania sumy wartości z grupy wybranych wierszy. 
+COUNT- Funkcja zliczająca liczbę wybranych wierszy z kolumny podanej w argumencie. 
+
+Przykład:
+SELECT manager_id, MAX(salary) FROM employees group by manager_id; 
+
+operatory logiczne AND, OR, NOT
+instrukcja warunkowa w postaci IIF (warunek, JeśliPrawda, JeśliFałsz)
+
+SELECT ROUND(3.1415,2) FROM DUAL; <-- Zaokrągla liczbę 3.1415 do dwóch miejsc po przecinku. Wynik to 3.14
+
+SELECT POWER(2,4) FROM DUAL; <-- Podniesienie wartości 2 do potęgi czwartej. Wynik to 16 
+
+SELECT SQRT(16) FROM DUAL; <-- Pierwiastek kwadratowy z wartości x. 
+
+Funkcja MOD <-- Reszta z dzielenia x przez y. 
+Jeśli wartość y jest równa 0 funkcja zwróci x. 
+SELECT MOD(5,3) FROM DUAL; 
+                <-- Zapytanie zwróci reszte z dzielenia 5 przez 3 – w wyniku otrzymamy wartość 2.
+                
+## Operacje
+
+ Aby utworzyć bazę danych uzywamy:
+ 
+ CREATE DATABASE name;
+ DROP DATABASE name;  <-- delete
+ 
+ BACKUP DATABASE name
+ TO DISK = 'filepath'; 
+ 
+ CREATE TABLE table_name (
+    column1 datatype,
+    column2 datatype,
+    column3 datatype,
+   ....
+); 
+
+Create using other table:
+
+CREATE TABLE new_table_name AS
+    SELECT column1, column2,...
+    FROM existing_table_name
+    WHERE ....; 
+    
+DROP TABLE table_name; 
+
+The ALTER TABLE statement is used to add, delete, or modify columns in an existing table.
+
+The ALTER TABLE statement is also used to add and drop various constraints on an existing table.
+
+ALTER TABLE table_name
+ADD column_name datatype;
+
+ALTER TABLE table_name
+DROP COLUMN column_name; 
+
+INSERT TO - uzupełnienie danych
+NOT NULL - wartość nie może być pusta
+NULL - wartość może być pusta
+INCREMENT - automatycznie nadana wartość
+PRIMARY KEY - klucz podstawowy (na przykład ID, to kolumna, która została wybrana w tabeli 
+              w celu jednoznacznego i niepowtarzalnego zidentyfikowania)
+INT - liczba całkowita
+
+UPDATE tabela SET model='Corsa' 
+WHERE model='Astra'
+
+## SQL servers
+  MySQL
+  SQLite
+  Oracle Database
+  Maria DB
+  Berkeley DB
+  Postgre SQL
+  
+ # Databases
+  SQL servers
+  NoSQL servers
+  SQL DSL
+  MongoDB(no sql)
+  
+ # My SQL server installation
+  root:# apt install mysql-server
+  
+  Status:
+  
+  root:# systemctl status mysql
+  
+  SQL session:
+  
+  root:# mysql
+  
+  <-- daje nam możliwość komunikować się z serverem
+  
+  \s - status
+  \h - wywołanie funkcji
+  Q - wyjść
+  
+
+
+
+ 
+   
+   
     
    
     
