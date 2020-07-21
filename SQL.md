@@ -254,4 +254,24 @@ The best Excercices from:
     FROM Customers
     GROUP BY Country;  <--- List the number of customers in each country.
     
+   ## Charakterystyka
+    SQL posiada pewne reguły.
+    
+    INSTRUKCJA SQL zaczyna się poleceniem lub też słowem kluczowym,
+    określającym operację, którą zamierzamy wykonać. 
+    
+    Po słowie kluczowym mogą znalęźć się KLAUZULE czyli dookreślenie do słowa kluczowego.
+    
+    Słowami kluczowymi są pewne słowa zastrzeżone, ponieważ mają już przypisane przynajmniej jedno znaczenie.
+    
+    Podobnie jak w innych językach programowania do takich słow należą:
+    IF, BEGIN, ELSE
+    
+    Analogicznie jest w języku SQL.
+    Sformułowanie zastrzeżone oznacza, że nie możemy takiej nazwy użyć jako identyfikatora. 
+    Na przykład, nie możemy kolumny nazwać "Select".
+    
+   ## KLAUZULE
+    
+   
     
