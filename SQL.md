@@ -168,3 +168,40 @@ FROM Products;           <--- oblicza liczbę produktów z tabeli Products
     and sometimes you only want to list the different (distinct) values.)
     SELECT Country FROM Customers; <--- wybiera całą listę z 91 recordów 91 krajów, kraje się powtarzają
     SELECT DISTINCT Country FROM Customers; <--- porównuje i wybiera 21 krajów, tylko występujące nazwy
+    ORDER BY City - porządkuje akfabetycznie
+    ORDER BY City DESC - porzadkuje w odwrotnie
+    SELECT * FROM Customers
+    ORDER BY Country, City; - porządkuje najpierw według kraju, potem według miasta
+    INSERT INTO Customers(
+    CustomersName,
+    Address)
+    VALUES(
+    'Tom',
+    'Street 12');
+    PostalCode column is empty
+    WHERE PostalCode IS NULL
+    PostalCode column is not empty
+    WHERE PostalCode IS NOT NULL
+    Update the City column of all records in the Customers table.
+    UPDATE Customers
+    SET City = 'Oslo';
+    Set the value of the City columns to 'Oslo', but only the ones where the Country column has the value "Norway".
+    UPDATE Customers
+    SET City = 'Oslo'
+    WHERE Country = 'Norway';
+    DELETE FROM  Customers
+    WHERE Country = 'Norway';
+    DELETE FROM Customers;  <--- delete all records
+    Use the MIN function to select the record with the smallest value of the Price column.
+    SELECT MIN(Price)   <--- MAX(Price)
+    FROM Products;
+    SELECT COUNT(*)
+    FROM Products
+    WHERE Price = 18;  <-- Use the correct function to return the number of records that have the Price value set to 18.
+    SELECT AVG(Price)
+    FROM Products;   <--- Use an SQL function to calculate the average price of all products.(średnia cena wszystkich produktów)
+    SELECT SUM(Price)
+    FROM Products;   <--- suma cen wszystkich produktów
+    SELECT * FROM Customers
+    WHERE City LIKE 'a%';    <--- Select all records where the value of the City column starts with the letter "a".
+    WHERE City LIKE '%a';    <--- Select all records where the value of the City column ends with the letter "a".
