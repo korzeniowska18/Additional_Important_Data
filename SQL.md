@@ -1,7 +1,7 @@
 ## SQL (Structured Query Language) 
 
 ```
-Strukturalny język zapytań - uzywany do tworzenia, modyfikowania baz danych 
+Strukturalny język zapytań - używany do tworzenia, modyfikowania baz danych 
 oraz do umieszczania i pobierania danych z baz danych.
 
 SQL - jest językiem proceduralnym, należący do języków deklaratywnych.
@@ -16,7 +16,7 @@ operacji takich jak:
 ```
 # Operatory
 ```
-Podstawowym elementem SQL są OPERATORY AŁGIEBRY relacyjnej.
+Podstawowym elementem SQL są OPERATORY ALGIEBRY relacyjnej.
 
 Operator taki pobiera ARGUMENTY będące RELACJAMI i zwraca RELACJĘ WYNIKOWĄ
 ```
@@ -41,7 +41,7 @@ wiek > 15;  (jest to warunek i pamiętamy o średniku)
 
 1. CREATE TABLE uczniowie(
 2. id INT;
-3. imie KLASA
+3. imie KLASA(4),
 4. wiek INT
 5. );
 6. INSERT INTO uczniowie (id, imie, wiek) VALUES 
@@ -79,6 +79,59 @@ większej liczby tabel w celu porównania lub zestawienia.
 W tabelach biorących udział w złączeniach muszą występować kolumny zgodne 
 i spełniające warunki pozwolające na dokonanie złączenia. 
 
+Zaleca się więc, aby kolumny te łączyły dwie relacje na zasadzie:
+Klucz podstawowy i Klucz obcy. 
 
+* [https://www.sqlpedia.pl/logiczne-przetwarzanie-zapytan-sql-laczenie-wielu-tabel/](https://www.sqlpedia.pl/logiczne-przetwarzanie-zapytan-sql-laczenie-wielu-tabel/)
+
+SELECT tabela1.kolumna
+      ,tabela2.kolumna
+  FROM tabela1 INNER JOIN tabela2
+             ON product.id = tabela2.product_id;     < --- ON - porównuje wskazane elementy z tabel i keidy wartości są równe, wypisuje je
+             
+To zapytanie zwraca wszystkie kolumny z tabel tabela1 i tabela2. Zwrócone są tylko te wiersze, dla których wartość kolumn product.id i tabela2.product_id jest równa.
+
+***
+ 
+Iloczyn kartezjański oznacza brak wskazania warunku złączenia, czyli łączenie dwóch tabel, dla każdego możliwego złączenia wartości z tabeli A z wartością z tabeli B.
+ 
+tabela IMIONA to wykaz 3 imion (tylko jedno pole), tabela NAZWISKA to wykaz 7 nazwisk (tylko jedno) pole, używając: 
+
+Select * from IMONA, NAZWISKA; 
+
+Wygeneruje zestaw par: imię plus nazwisko, 21 takich par będzie.  Jak potrzebujemy dużej liczby danych, to jest to podstawowe  zastosowanie tego typu złączenia.
+
+***
+
+OUTER JOIN
+
+Istnieją trzy rodzaje złączeń typu OUTER:
+
+    LEFT OUTER JOIN,   <---LEFT OUTER JOIN zwraca:  wiersze dla których warunek złączenia jest spełniony,
+                                                    wiersze z “lewej tabeli” dla których nie ma odpowiedników w prawej 
+    RIGHT OUTER JOIN,  <---RIGHT OUTER JOIN zwraca: wiersze dla których warunek złączenia jest spełniony,
+                                                    wiersze z “prawej tabeli” dla których nie ma odpowiedników w lewej
+    FULL OUTER JOIN.   <---FULL OUTER JOIN jest złączeniem które zwraca:  wiersze dla których warunek złączenia jest spełniony,
+                                                                          wiersze z “lewej tabeli” dla których nie ma odpowiedników w prawej
+                                                                          wiersze z “prawej tabeli” dla których nie ma odpowiedników w lewej
+
+SELECT *
+  FROM tabela1 LEFT OUTER JOIN tabela2
+             ON tabela1.id = tabela2.product_id;
+             
+
+
+    JOIN to to samo co INNER JOIN,
+    LEFT JOIN to to samo co LEFT OUTER JOIN,
+    RIGHT JOIN to to samo co RIGHT OUTER JOIN,
+    FULL JOIN to to samo co FULL OUTER JOIN,
+    CROSS JOIN to to samo co iloczyn kartezjański.
+
+SELECT tabela1.id AS id_m  <--- AS - tworzy nową kolumnę id_m z dannymi z kolumny id z tabela1
 
 ```
+## Suma
+```
+Suma - dotyczy dwóch relacji o tym samym schemacie
+```
+
