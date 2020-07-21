@@ -163,4 +163,8 @@ FROM Products;           <--- oblicza liczbę produktów z tabeli Products
     DROP TABLE - deletes a table
     CREATE INDEX - creates an index (search key)
     DROP INDEX - deletes an index
-
+    The SELECT DISTINCT statement is used to return only distinct (different) values.
+    (Inside a table, a column often contains many duplicate values; 
+    and sometimes you only want to list the different (distinct) values.)
+    SELECT Country FROM Customers; <--- wybiera całą listę z 91 recordów 91 krajów, kraje się powtarzają
+    SELECT DISTINCT Country FROM Customers; <--- porównuje i wybiera 21 krajów, tylko występujące nazwy
