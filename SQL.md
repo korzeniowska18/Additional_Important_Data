@@ -89,17 +89,20 @@ SELECT tabela1.kolumna
   FROM tabela1 INNER JOIN tabela2
              ON product.id = tabela2.product_id;     < --- ON - porównuje wskazane elementy z tabel i keidy wartości są równe, wypisuje je
              
-To zapytanie zwraca wszystkie kolumny z tabel tabela1 i tabela2. Zwrócone są tylko te wiersze, dla których wartość kolumn product.id i tabela2.product_id jest równa.
+To zapytanie zwraca wszystkie kolumny z tabel tabela1 i tabela2. Zwrócone są tylko te wiersze, 
+dla których wartość kolumn product.id i tabela2.product_id jest równa.
 
 ***
  
-Iloczyn kartezjański oznacza brak wskazania warunku złączenia, czyli łączenie dwóch tabel, dla każdego możliwego złączenia wartości z tabeli A z wartością z tabeli B.
+Iloczyn kartezjański oznacza brak wskazania warunku złączenia, czyli łączenie dwóch tabel, 
+dla każdego możliwego złączenia wartości z tabeli A z wartością z tabeli B.
  
 tabela IMIONA to wykaz 3 imion (tylko jedno pole), tabela NAZWISKA to wykaz 7 nazwisk (tylko jedno) pole, używając: 
 
 Select * from IMONA, NAZWISKA; 
 
-Wygeneruje zestaw par: imię plus nazwisko, 21 takich par będzie.  Jak potrzebujemy dużej liczby danych, to jest to podstawowe  zastosowanie tego typu złączenia.
+Wygeneruje zestaw par: imię plus nazwisko, 21 takich par będzie.  
+Jak potrzebujemy dużej liczby danych, to jest to podstawowe  zastosowanie tego typu złączenia.
 
 ***
 
@@ -111,9 +114,10 @@ Istnieją trzy rodzaje złączeń typu OUTER:
                                                     wiersze z “lewej tabeli” dla których nie ma odpowiedników w prawej 
     RIGHT OUTER JOIN,  <---RIGHT OUTER JOIN zwraca: wiersze dla których warunek złączenia jest spełniony,
                                                     wiersze z “prawej tabeli” dla których nie ma odpowiedników w lewej
-    FULL OUTER JOIN.   <---FULL OUTER JOIN jest złączeniem które zwraca:  wiersze dla których warunek złączenia jest spełniony,
-                                                                          wiersze z “lewej tabeli” dla których nie ma odpowiedników w prawej
-                                                                          wiersze z “prawej tabeli” dla których nie ma odpowiedników w lewej
+    FULL OUTER JOIN.   <---FULL OUTER JOIN jest złączeniem które zwraca:  
+                                                    wiersze dla których warunek złączenia jest spełniony,
+                                                    wiersze z “lewej tabeli” dla których nie ma odpowiedników w prawej
+                                                    wiersze z “prawej tabeli” dla których nie ma odpowiedników w lewej
 
 SELECT *
   FROM tabela1 LEFT OUTER JOIN tabela2
@@ -134,4 +138,14 @@ SELECT tabela1.id AS id_m  <--- AS - tworzy nową kolumnę id_m z dannymi z kolu
 ```
 Suma - dotyczy dwóch relacji o tym samym schemacie
 ```
+*[https://www.w3schools.com/sql/default.asp](https://www.w3schools.com/sql/default.asp)
 
+SELECT SUM(Quantity)
+FROM OrderDetails;
+
+SELECT SUM(Quantity)
+FROM OrderDetails WHERE
+Quantity > 70;           <--- oblicza sumę wszystkich liczb Quantity powyżej 70 z tabeli OrderDetails
+
+SELECT COUNT(ProductID)
+FROM Products;           <--- oblicza liczbę produktów z tabeli Products
