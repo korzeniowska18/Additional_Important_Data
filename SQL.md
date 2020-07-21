@@ -152,6 +152,9 @@ FROM Products;           <--- oblicza liczbę produktów z tabeli Products
 
 ## Some of The Most Important SQL Commands
 
+The best Excercices from:
+*[https://www.w3schools.com/sql/sql_exercises.asp](https://www.w3schools.com/sql/sql_exercises.asp)
+
     SELECT - extracts data from a database
     UPDATE - updates data in a database
     DELETE - deletes data from a database
@@ -205,3 +208,6 @@ FROM Products;           <--- oblicza liczbę produktów z tabeli Products
     SELECT * FROM Customers
     WHERE City LIKE 'a%';    <--- Select all records where the value of the City column starts with the letter "a".
     WHERE City LIKE '%a';    <--- Select all records where the value of the City column ends with the letter "a".
+    WHERE City LIKE '%a%';   <--- Select all records where the value of the City column contains the letter "a".
+    WHERE City LIKE 'a%b'    <--- Select all records where the value of the City column starts with letter "a" and ends with the letter "b".
+    WHERE City NOT LIKE 'a%' <--- Select all records where the value of the City column does NOT start with the letter "a".
