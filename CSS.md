@@ -2,8 +2,31 @@
 
    Kaskadowe arkusze stylów (ang. Cascading Style Sheets, w skrócie CSS).
    Jest to język służący do opisu formy prezentacji (wyświetlania) stron WWW.
-   CSS został opracowany przez organizację W3C w 1996 r. jako potomek języka DSSSL 
-   przeznaczony do używania w połączeniu z SGML-em. Pierwszy szkic CSS zaproponował w 1994 r. Håkon Wium Lie[1].
+   
+   Jest to coś co pozwala określać styl tagów. 
+   Prezglądarka ma włąsne style, a my możemy nadpisać pewne style, 
+   jak nie nadpiszemy to zostaną domyślne.
+   
+   CSS pozwala zmćniejszyć zakres prac podczas wprowadzenia zmian. 
 
-   Arkusz stylów CSS to lista dyrektyw (tzw. reguł) ustalających w jaki sposób 
-   ma zostać wyświetlana przez przeglądarkę internetową zawartość wybranego elementu (lub elementów) (X)HTML lub XML.
+   <style type="text/css">
+      /*<![CDATA[*/   ---- CDATA = character data
+      p
+       {
+        color: green;
+        font-size: 30px;
+       }
+      p
+      /*]]>*/
+   </style>
+   </head>
+    <body>
+ <p>Ciekawa informacja</p>
+ <p>Ciekawa informacja</p>
+ <p>Ciekawa informacja</p>
+ <p style=color: blue>Ciekawa informacja</p>
+ 
+ #ostatni paragraph będzie wyświetlony na niebiesko, wcześniejsze na zielono, 
+ jest to style inline - styl w linii
+ 
+ 
