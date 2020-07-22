@@ -29,4 +29,20 @@
  #ostatni paragraph będzie wyświetlony na niebiesko, wcześniejsze na zielono, 
  jest to style inline - styl w linii
  
+ Jeśli wcześniej dodamy linię:
+ <link hrew="style.css" rel="stylesheet" type='text/css"
  
+ A wcześniej stworzymy plik "style.css" z zawartością:
+ p
+ {
+ color: purple
+}
+ To teraz w naszej kaskade wszystkie napisy bedą koloru purple, oprócz ostatniego
+ 
+ Możemy nadpisać zasady do fwóch tagów:
+ 
+ p, b 
+ 
+{
+}
+
