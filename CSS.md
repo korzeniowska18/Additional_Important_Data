@@ -39,7 +39,7 @@
 }
  To teraz w naszej kaskade wszystkie napisy bedą koloru purple, oprócz ostatniego
  
- Możemy nadpisać zasady do fwóch tagów:
+ Możemy nadpisać zasady dla dwóch tagów:
  
  p, b 
  
