@@ -8,7 +8,7 @@
    jak nie nadpiszemy to zostaną domyślne.
    
    CSS pozwala zmćniejszyć zakres prac podczas wprowadzenia zmian. 
-
+   ```
    <style type="text/css">
       /*<![CDATA[*/   ---- CDATA = character data
       p
@@ -25,11 +25,12 @@
  <p>Ciekawa informacja</p>
  <p>Ciekawa informacja</p>
  <p style=color: blue>Ciekawa informacja</p>
- 
+ ```
  #ostatni paragraph będzie wyświetlony na niebiesko, wcześniejsze na zielono, 
  jest to style inline - styl w linii
  
  Jeśli wcześniej dodamy linię:
+ ```
  <link hrew="style.css" rel="stylesheet" type='text/css"
  
  A wcześniej stworzymy plik "style.css" z zawartością:
@@ -45,4 +46,4 @@
  
 {
 }
-
+```
