@@ -94,11 +94,23 @@ po znalezieniu go w drzewie (strukturze) strony, przeglądarka nie musi szukać 
  Span, jest to rozpietość, odległość pomiędzy jednym punktem a drugim.
  
  <div> tworzy bloczki i jest wyświetlany w blokach. 
+ 
  ```
  text-align: justify;  <-- używamy do div, ale nie używamy do span, bo nic nie zmienia
  
  width: 600px;         <-- możemy zmieniać szerokość bloku w div
  
  background: purple;   <-- zmieniamy tło dla span lub div
+ 
+ text-align: center;
+ 
+ class="center large"  <--używamy dwie klasy "center" i "large"
+ 
+ Te zmiany będą dotyczyć każdego elementu HTML an stronie:
+ 
+ * {
+  text-align: center;
+  color: blue;
+}
  
  ```
