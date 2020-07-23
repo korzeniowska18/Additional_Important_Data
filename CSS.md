@@ -114,3 +114,31 @@ po znalezieniu go w drzewie (strukturze) strony, przeglądarka nie musi szukać 
 }
  
  ```
+Background property:
+
+```
+The background property is a shorthand property for:
+
+    background-color
+    background-image
+    background-position
+    background-size
+    background-repeat
+    background-origin
+    background-clip
+    background-attachment
+
+background-repeat: repeat|repeat-x|repeat-y|no-repeat|initial|inherit;
+repeat 	The background image is repeated both vertically and horizontally.  
+        The last image will be clipped if it does not fit. This is default 	
+repeat-x 	The background image is repeated only horizontally 	
+repeat-y 	The background image is repeated only vertically 	
+no-repeat 	The background-image is not repeated. The image will only be shown once 	
+space 	The background-image is repeated as much as possible without clipping. 
+       The first and last images are pinned to either side of the element, 
+       and whitespace is distributed evenly between the images 	
+round 	The background-image is repeated and squished or stretched to fill the space (no gaps) 	
+initial 	Sets this property to its default value. Read about initial 	
+inherit 	Inherits this property from its parent element. Read about inherit
+```
+
