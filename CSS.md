@@ -87,3 +87,18 @@ color: blue;
 ```
 Używając "#" szukasz tylko jednego elementu, tak więc 
 po znalezieniu go w drzewie (strukturze) strony, przeglądarka nie musi szukać dalej.
+
+<p> - używamy do tworzenia tekstów, akapitów, paragraph wyświetla tekst z odstępem
+ 
+ <span> używamy do tekstu, który ma być wyświetlony w jednej linii. 
+ Span, jest to rozpietość, odległość pomiędzy jednym punktem a drugim.
+ 
+ <div> tworzy bloczki i jest wyświetlany w blokach. 
+ ```
+ text-align: justify;  <-- używamy do div, ale nie używamy do span, bo nic nie zmienia
+ 
+ width: 600px;         <-- możemy zmieniać szerokość bloku w div
+ 
+ background: purple;   <-- zmieniamy tło dla span lub div
+ 
+ ```
