@@ -37,7 +37,7 @@
  A wcześniej stworzymy plik "style.css" z zawartością:
  p
  {
- color: purple
+ color: purple;
 }
  To teraz w naszej kaskadzie wszystkie napisy bedą koloru purple, oprócz ostatniego
  
@@ -49,11 +49,11 @@
 }
 ```
 Wprowadzenie zmian na podstawie class.
-Klasa zawiera kilka elementów należących do jednej klasy.
+Klasa zawiera wiele elementów należących do jednej klasy.
 ```
 p.definicja
 {
-color: red
+color: red;
 }
 
 <p class="definicja">To jest niezwykły tekst</p>
@@ -65,7 +65,7 @@ Jeśli chcemy zmian dla "b" również
 ```
 p.definicja, b.definicja
 {
-color: red
+color: red;
 }
 ```
 dla wszystkich:
@@ -73,7 +73,8 @@ dla wszystkich:
 *.definicja
 ```
 ID - jest to identyfikator, jedyny w swoim rodzaju.
-Identyfikatora używa się do czegoś co występuje tylko raz. 
+Identyfikatora używa się do czegoś co występuje tylko raz na stronie.
+Ten sam identyfikator można użyć na podstronie. 
 ```
 <h1 id="wyloguj">Wyloguj</h1>
 ```
@@ -81,6 +82,8 @@ Aby wprowadzić zmiany dotyczące ID odwołujemy się w ten sposób:
 ```
 h1#wyloguj
 {
-color: blue
+color: blue;
 }
 ```
+Używając "#" szukasz tylko jednego elementu, tak więc 
+po znalezieniu go w drzewie (strukturze) strony, przeglądarka nie musi szukać dalej.
