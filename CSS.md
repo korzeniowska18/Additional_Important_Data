@@ -515,4 +515,9 @@ a:hover {
 a:active {
   background-color: yellow;
 }
+Change the background color, when a user hovers over p elements, with the class "highlight", to "lightblue".
+p.highlight:hover {
+  background-color: lightblue;
+}
 ```
+
