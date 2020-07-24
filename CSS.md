@@ -600,4 +600,77 @@ Set a border with the color "red", around elements with a "title" attribute cont
 ```
 Rounded Corners
 ```
+Give the <div> element rounded corners (use the shorthand property and the value "25px").
+div {
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;  
+  border-radius: 25px;
+}                                  <-- zaokragła kąty ramki
+Give the <div> element a rounded corner (25px radius) on the bottom left side.
+div {
+  border-bottom-left-radius: 25px;
+  background: #73AD21;
+  padding: 20px; 
+  width: 200px;  
+}                              <-- zaokrągla lewy dolny kąt
+  
+```
+Border Images
+```
+Give the <div> element an image border using the image "border.png". Slice the image at 30px and repeat it.
+div { 
+  border: 10px solid transparent;
+  border-image: url(border.png) 30 round;
+}                                          <--- ramka z powtarzających się kwadracików
+
+Give the <div> element an image border using the image "border.png". Slice the image at 30px and stretch it.
+div {
+  border: 10px solid transparent;
+  border-image: url("border.png") 30 stretch;
+}
+```
+Backgrounds
+```
+Add a second background image ("img_flwr.gif") to the <body> element. Make sure that "img_flwr.gif" is displayed on top of the current background image.
+Jedno tło na drugim
+body {
+  background-image: url(img_flwr.gif), url(paper.gif);
+}
+Change the size of the background image to: width 100px, height 80px.
+body {
+  background:url(img_flwr.gif);
+  background-size: 100px 80px;
+  background-repeat: no-repeat;
+}
+Change the size of the background image so it always fits the entire page.
+Zmień rozmiar obrazu tła, aby zawsze pasował do całej strony.
+html { 
+  background: url(img_flower.jpg) no-repeat center center fixed; 
+  background-size: cover;
+}
+Specify that the background image position should start from the upper left corner of the content-box.
+Określ, że pozycja obrazu tła powinna zaczynać się od lewego górnego rogu pola treści.
+div { 
+  border: 10px solid black;
+  padding: 35px;
+  background: url(img_flwr.gif);
+  background-repeat: no-repeat;
+  background-origin: content-box;
+}
+Specify that the "painting area" of the background should be to the outside edge of the padding.
+Określ, że „obszar malowania” tła powinien znajdować się na zewnętrznej krawędzi wypełnienia.
+div { 
+  border: 10px dotted black;
+  padding: 35px;
+  background: lightblue;
+  background-clip: padding-box;
+}
+```
+Colors
+```
+Set the opacity for the background color of the <h1> element to "0.3" by using a RGBA color instead of RGB.
+h1 {
+   background-color: rgba(0,255,0,0.3);
+}
 ```
