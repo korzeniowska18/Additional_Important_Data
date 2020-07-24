@@ -382,4 +382,137 @@ Display the list items as inline elements.
 li {
   display: inline;
 }
+
+Display the <strong> elements as block elements.
+strong {
+  display:block;
+}
+```
+Positioning
+```
+Position the <h1> element relative to the browser window. 50px from the top, and 50px from the right.
+h1 {
+  position: fixed;
+  top: 50px;
+  right: 50px;
+  color: red;
+}
+Position the <h1> element 20px left, and 30px down, relative to its normal position.
+h1 {
+  position: relative;  <-- jeśli chce przesunąć w dół, piszę top
+  top: 30px;
+  left: -20px;
+  color: red;
+}
+All CSS Positioning Properties
+bottom 	- Sets the bottom margin edge for a positioned box
+clip 	  - Clips an absolutely positioned element
+left 	  - Sets the left margin edge for a positioned box
+position -	Specifies the type of positioning for an element
+right 	  - Sets the right margin edge for a positioned box
+top      -	Sets the top margin edge for a positioned box
+z-index 	- Sets the stack order of an element (behind the text)
+
+Position the <h1> element 50px from the left, and 100px from the top, relative to the HTML page.
+body, h1 {
+  position: absolute;
+  left: 50px;
+  top: 100px;
+  color: red;
+}
+Position the <img> element behind the text.
+img {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  z-index: -1;
+}
+Position the element with the "topleft" class 30px from the left, and 15px from the top, relative to its container.
+.topleft {
+  position: absolute;
+  top: 15px;
+  left: 30px;
+  font-size: 18px;
+}
+```
+Overflow
+```
+Add a scrollbar to the <div> element.
+div {
+  background-color: #eee;
+  width: 200px;
+  height: 70px;
+  border: 1px dotted black;
+  overflow: scroll;
+}
+Specify that the overflowing text in the <div> element should not be visible, not even with scrolling.
+div {
+  background-color: lightblue;
+  width: 200px;
+  height: 200px;
+  overflow: hidden;
+}
+Add a horizontal scrollbar to <div>.
+overflow-x: scroll;
+```
+Align
+```
+Center align the <div> element using margins.
+div {
+  width: 300px;
+  background-color: #b0e0e6;
+  text-align: center;
+  margin: auto;
+}
+Position the <div> element all the way to the right using absolute positioning.
+div {
+  position: absolute;
+  right: 0px;
+  width: 300px;
+  background-color: #b0e0e6;
+}
+```
+Combinators
+```
+Change the color of all <p> elements, that are descendants of <div> elements, to "red".
+div p {          <-- wszystkie elemnty "p" wewnatrz "div"
+  color: red;
+}
+Change the color of all <p> elements, that are immediate children of <div> elements, to "red".
+div > p {        <-- wszystkie bezpośrednie elementy "p" wewnątrz 'div", span już nie
+  color: red;
+}
+Change the color of <p> elements, that are the adjacent (immediately following) 
+sibling of a <div> element, to "red".  <-- element, który idzie bezpośrednio po <div>
+div + p {
+  color: red;
+}
+Change the color of <p> elements, that are the siblings of a <div> element, to "red".
+div ~ p {
+  color: red;
+}
+```
+Pseudo-classes
+```
+Set the background color for visited and unvisited links to "lightblue", 
+and the background color for the hover and active link states to "yellow".
+/* unvisited link */
+a:link {
+  background-color: lightblue;
+}
+
+/* visited link */
+a:visited {
+  background-color: lightblue;
+}
+
+/* mouse over link */
+a:hover {
+  background-color: yellow;
+}
+
+/* selected link */
+a:active {
+  background-color: yellow;
+}
 ```
