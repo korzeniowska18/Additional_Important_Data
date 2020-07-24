@@ -152,4 +152,12 @@ border-top-color: red;
 ```
 Margin
 ```
+margin: 20px;
+margin-top: 50px;
+margin-bottom: 50px;
+margin-right: 25px;
+margin-left: 25px;
+width: 300px;
+margin: auto;   <-- Use the margin property to center align the <h1> element.
 ```
+Padding
