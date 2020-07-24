@@ -141,4 +141,15 @@ round 	The background-image is repeated and squished or stretched to fill the sp
 initial 	Sets this property to its default value. Read about initial 	
 inherit 	Inherits this property from its parent element. Read about inherit
 ```
-
+Border
+```
+border-style: dotted;
+border-width: 4px;
+border-color: red;
+border-top-style: dotted;
+border-top-width: 4px;
+border-top-color: red;
+```
+Margin
+```
+```
