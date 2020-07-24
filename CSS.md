@@ -343,4 +343,43 @@ ul {
 ```
 Tables
 ```
+Set the border to "2px solid green" for table, th and td elements.
+table, th, td {
+  border: 2px solid green;
+}
+Collapse the table borders into a single border.
+table {
+  border-collapse: collapse;
+}
+table, td, th {
+  border: 1px solid black;
+}
+Set the width of the table to "100%".
+table {
+  width: 100%;
+}
+Set the text alignment in <td> elements to "right".
+td {
+  text-align: right;
+}
+Set the padding in <th> elements to "15px".
+th {
+  padding: 15px;
+}
+```
+Display/Visibility
+
+```
+Hide the <h1> element. It should still take up the same space as before.
+h1 {
+  visibility: hidden;
+}
+Hide the <h1> element. It should not take up any space.
+h1 {
+  display: none;
+}
+Display the list items as inline elements.
+li {
+  display: inline;
+}
 ```
