@@ -673,4 +673,123 @@ Set the opacity for the background color of the <h1> element to "0.3" by using a
 h1 {
    background-color: rgba(0,255,0,0.3);
 }
+Set the following HSL color as the background of the <h1> element:
+Set the Hue to red (0), Saturation to 100%, and lightness to 50%.
+h1 {
+   background-color: hsl(0,100%,50%);
+}
+Set the opacity for the background color of the <h1> element to "0.3" by using a HSLA color instead of HSL.
+h1 {
+  background-color: hsla(0,100%,50%,0.3);
+}
+Set the transparency/opacity of the <h1> element to "0.4".
+h1 {
+  background-color: red;
+  opacity: 0.4;
+}
+```
+Gradients
+```
+Set a linear gradient background for the <div> element, going from the top to bottom, transitioning from "white" to "green".
+div {
+  background-image: linear-gradient(white, green);
+}                                        <--- ładne tło z nierównym kolorem, od ciemniejszego do bardziej jasnego
+Set a linear gradient background for the <div> element, going from the top left to the bottom right, transitioning from "white" to "green".
+div {
+  background-image: linear-gradient(to bottom right, white, green);
+}                                        <--- kolor się zmienia, od lewego górnego rogu do prawego dolnego, w prawym jest bardziej nasycony
+Set a linear gradient background for the <div> element, going at a 70 degree angle, transitioning from "white" to "green".
+div {
+  background-image: linear-gradient(70deg, white, green);
+}
+Set a linear gradient background for the <div> element, going from the top to bottom, transitioning from "white" to "red" to "blue" to "green".
+div {
+  background-image: linear-gradient(white, red, blue, green);
+}
+Set a linear gradient background for the <div> element, going from the top to bottom, transitioning from "rgba(0,255,0,0.2)" to "rgba(0,255,0,1)".
+div {
+  background-image: linear-gradient(rgba(0,255,0,0.2), rgba(0,255,0,1));
+}
+Set a radial gradient background for the <div> element, transitioning from "white" to "green".
+div {
+  background-image: radial-gradient(white, green);
+}                                 <--- color zostaje rozprowadzony na stronie od środka
+
+Set a radial gradient background for the <div> element, with a circle shape, transitioning from "white" to "green".
+div {
+  background-image: radial-gradient(circle, white, green);
+}
+
+```
+Shadow Effects
+```
+Set a "2px" horizontal, and "2px" vertical, text shadow for the <h1> element.
+h1 {
+  text-shadow: 2px 2px;
+}                            <--- cień za tekstem
+Change the color of the text shadow to "green", and set a "5px" blur radius.
+h1 {
+  text-shadow: 2px 2px 5px green;
+}
+Add a new shadow (do not remove the current one) to the <h1> element with: no horizontal or vertical shadow, 10px blur, and a red color.
+h1 {
+  text-shadow: 2px 2px 5px green, 0 0 10px red;
+}
+Set a "10px" horizontal, and "10px" vertical, box shadow for the <div> element.
+div {
+  box-shadow: 10px 10px;
+}
+Change the color of the box shadow to "grey", and set a "5px" blur.
+div {
+  box-shadow: 10px 10px 5px grey;
+}
+
+```
+Text Effects
+```
+Specify that the overflowed content for the <p> element should be signaled with an ellipsis (...)
+p {
+  white-space: nowrap; 
+  width: 200px; 
+  border: 1px solid #000000;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+Specify that text in the <p> element should wrap, even if it needs to split in the middle of a word.
+p {
+  width: 150px; 
+  border: 1px solid #000000;
+  word-wrap: break-word;
+}                              <-- kiedy długie słowo ucieka za ramkę
+Specify that text in the <p> element can break between any two letters.
+p {
+  width: 150px; 
+  border: 1px solid #000000;
+  word-break: break-all;
+}
+```
+Web Fonts
+```
+Add a web font with the name "sansation" and the URL "sansation_light.woff".
+@font-face {
+   font-family: sansation;
+   src: url(sansation_light.woff);
+}
+body {
+  font-family: sansation;
+}
+Add another @font-face rule for bold characters of the "sansation" font. Use the URL "sansation_bold.woff".
+@font-face {
+   font-family: sansation;
+   font-weight: bold;
+   src: url(sansation_bold.woff);
+}
+
+body {
+   font-family: sansation;
+}
+```
+Transforms
+```
+
 ```
