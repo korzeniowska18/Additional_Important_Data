@@ -519,5 +519,85 @@ Change the background color, when a user hovers over p elements, with the class 
 p.highlight:hover {
   background-color: lightblue;
 }
-```
+Set the background color of <p> elements, that are the first child of any element, to "lightblue".
+p:first-child {
+  background-color: lightblue;
+}                               <--- tło perwszego elementu <p>
+Set the background color of <input> elements that are in focus (clicked or active), to "lightblue".
+input:focus {
+  background-color: lightblue;
+}                                  <--- podświetla kolorem pole do wpisania, kiedy się klika na to pole
 
+```
+Pseudo-elements
+```
+Set text color to red, for the first line of the <p> element.
+p::first-line {
+  color: red;
+}
+Set text color to "red", and the text size to "xx-large", for the first letter of the <p> element.
+p::first-letter {
+  color: red;
+  font-size: xx-large;
+}
+Insert the image "smiley.gif" before, and after <p> elements, using the ::before and ::after pseudo-elements.
+p::before{
+  content: url(smiley.gif);
+}
+p::after{
+  content: url(smiley.gif);
+}
+```
+Opacity
+```
+Set the transparency/opacity of the <img> element to "0.4".
+img {
+  opacity: 0.4;
+}                   <-- obrazek pod wualą:)
+
+Exercise:
+
+Remove the transparency/opacity of the <img> element when the user hovers over it with the mouse pointer.
+
+img {
+  opacity: 0.4;
+}
+img:hover {
+  opacity: 1.0;
+}                    <--kiedy najezdżamy kursorem na rysunek, jest przezrocysty
+```
+Attribute Selectors
+```
+a, target {
+  background-color: lightblue;
+}
+Set the background-color to "lightblue" for elements with an attribute like: target="_blank"
+a, target._blank {
+  background-color: lightblue;
+}
+lub >>>
+a[target="_blank"] {
+  background-color: lightblue;
+}
+
+Set a border with the color "red", around elements with a "title" attribute containing the word "red".
+Use attribute selector [attribute~=value].
+[title~="red"] {
+  border: 5px solid red;
+}                              <-- ramki dookoła obrazków, które zawierają w opisie słowo "red"
+Set a border with the color "red", around elements with a "title" attribute starting with "red".
+[title^="red"] {
+  border: 5px solid red;
+}                               <-- ramki dookoła obrazków, które zawierają w opisie jako pierwsze słowo "red"
+Set a border with the color "red", around elements with a "title" attribute ending with the word "flower" (not flowers).
+[title$="flower"] {
+  border: 5px solid red;
+}                                <-- ramki dookoła obrazków, które zawierają w opisie jako ostatnie słowo "flower"
+Set a border with the color "red", around elements with a "title" attribute containing the value "flow".
+[title*="flow"] {
+  border: 5px solid red;
+}                                 <-- ramki dookoła obrazków, które zawierają w opisie jako elementy słowa "flow"
+```
+Rounded Corners
+```
+```
