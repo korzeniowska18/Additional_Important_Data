@@ -161,3 +161,111 @@ width: 300px;
 margin: auto;   <-- Use the margin property to center align the <h1> element.
 ```
 Padding
+```
+padding: 30px;
+padding-top: 25px;
+padding-bottom: 25px;
+padding-left: 50px;
+padding-right: 50px;
+```
+Height/Width
+```
+height: 100px;
+width: 50%;
+```
+Box Model (div)
+```
+div {
+  background-color: lightblue;
+  width: 200px;
+  padding: 25px;
+  border-width: 25px;
+  border-style: solid;
+  border-color: navy;
+}
+div {
+  background-color: lightblue;
+  width: 200px;
+  padding: 25px;
+  border: 25px solid navy;
+  margin: 25px;
+}
+```
+Outline (pogrubiona ramka)
+```
+p {
+  outline-style: solid;
+  outline-width: 5px;
+  outline-color: green;
+}
+ramka z czerwonymi pogrubionymi kółeczkami:
+p {
+  outline: red dotted 10px;
+}
+```
+Text
+```
+Set the text color for the page to "red", and the text color for <h1> to "blue".
+body {
+  color: red;
+}
+
+h1 {
+  color: blue;
+}
+h1 {
+  text-align: center;
+}
+text-decoration: none;   <--- usunąć podkreślenie linka
+text-transform: uppercase;   <--- zmienić text na duże pogrubione litery
+text-transform: capitalize;   <-- zmienić text aby każde słowo zaczynało się od dużej litery
+text-indent: 20px;   <--akapit pierwszej linii 20px 
+```
+Font
+```
+body {
+  font-family: "Courier New";
+}                                <-- page font family
+p {
+  font-style: italic;
+}                                 <-- <p> elements as "italic" text
+body {
+  font-size: 20px;
+}                              <-- font size for the page
+h1 {
+  font-size: 3em;
+}
+Wartość 1em jest równa wartości czcionki tekstu jaką posiada rodzic danego elementu HTML. 
+Jeżeli rodzic elementu HTML posiada wartość właściwości font-size równą 15px, 
+to wartość 1em, użyta w jakichkolwiek właściwościach CSS dzieci wspomnianego elementu rodzica, 
+będzie wynosić również 15px. Wartość 1.2em będzie wynosić 18px, bo 15 × 1.2 = 18. 
+Wartość 1.3em będzie wynosić 19.5px, bo 15 × 1.3 = 19.5 itd.
+
+Określamy wartości właściwości font-size w jednostce em, 
+dla poszczególnych części naszego kolumnowego układu elementów HTML: 
+#caly_blok {
+  font-size:15px;
+  min-width:480px;
+  max-width:1600px;
+  border-left:1px solid gold;
+  border-right:1px solid gold;
+}
+
+#naglowek {
+  background-color:gold;
+  text-align:center;
+  font-size:1.6em;
+  /* 1.6em = 24px, bo 15px × 1.6 = 24px */
+}
+Od teraz, wystarczy że zmienimy wartość właściwości font-size w regule CSS, 
+która odnosi się do elementu #caly_blok, a przeglądarka internetowa sama obliczy 
+wartości pozostałych właściwości CSS, w których została wykorzystana jednostka wartości em.
+
+font-weight: bold;    <--- pogrubiona czcionka
+p {
+  font: italic 20px Verdana;
+}                                <--- kursywa(pochylona), rozmiar czcionki, styl(rodzaj)
+```
+Links
+```
+```
