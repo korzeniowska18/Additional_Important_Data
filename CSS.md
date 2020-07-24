@@ -268,4 +268,79 @@ p {
 ```
 Links
 ```
+a {
+  color: green;
+}
+
+Set the color for unvisited links to "red", and the color for visited links "blue"
+
+/* mouse over link */
+a:link {
+  color: red;
+}
+
+/* selected link */
+a:visited {
+  color: blue;
+}
+
+Remove underlines for visited and unvisited links, and specify "underline" for the hover and active link states.
+
+<style>
+/* unvisited link */
+a:link {
+  text-decoration: none;
+}
+
+/* visited link */
+a:visited {
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  text-decoration: underline;
+}
+
+/* selected link */
+a:active {
+  text-decoration: underline;
+}
+</style>
+------
+a:active {
+  background-color: yellow;
+}
+```
+Lists
+```
+ul {
+  list-style-type: square;
+}
+ol - ordered list
+ul - unordered list
+Set the image "sqpurple.gif" as the list item marker for the unordered list.
+ul {
+  list-style-image: url('sqpurple.gif');
+}
+
+Bajerki:)
+With the list-style property: Set the unordered list marker to "img_marker.png", 
+with a backup style of "circle", and display the markers inside the content flow.
+
+The list-style property contains:
+list-style-type list-style-position list-style-image
+
+ul {
+  list-style: circle inside url('img_marker.png');
+}
+
+Remove the bullets/markers from the list items.
+Use the list-style-type property. (usuwanie kropeczek przed listą)
+ul {
+  list-style-type: none;
+}
+```
+Tables
+```
 ```
