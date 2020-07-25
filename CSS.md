@@ -789,7 +789,216 @@ body {
    font-family: sansation;
 }
 ```
-Transforms
+2D Transforms
 ```
+With the transform property, move the <div> element 100px to the right, and 200px down.
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+  transform: translate(100px,200px);
+}
+With the transform property, rotate the <div> element 45 degrees.
+div {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  background-color: lightblue;
+  border: 1px solid black;
+  transform: rotate(45deg);                      < --- rotate - obraca element
+}
+With the transform property, change the size of the <div> to half its width, but double its height.
+div {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  background-color: lightblue;
+  border: 1px solid black;
+  transform:scale(0.5, 2);               <--- scale - zmienia rozmiar
+}
+With the transform property, skew the <div> element 20 degrees along the X-axis, and 30 degrees along the Y-axis.
+Use the skew(), or skewX() and skewY() methods.
+div {
+  width: 100px;
+  height: 100px;
+  margin: 50px;
+  background-color: lightblue;
+  border: 1px solid black;
+  transform: skew(20deg, 30deg);                  <--- rozciąga element pod skosem
+}
+```
+3D Transforms
+```
+With the transform property, rotate the <div> element 150deg around its X-axis.
+Use the rotateX() method.
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+  transform: rotateX(150deg);
+}                                         <--- rotateX obraca element do góry nogami
+With the transform property, rotate the <div> element 120deg around its Y-axis.
+Use the rotateY() method.
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+  transform: rotateY(120deg);
+}                                         <-- obraca tak, że litery czytamy z lewa na prawo
+With the transform property, rotate the <div> element 90deg around its Z-axis.
+Use the rotateZ() method.
+div {
+  width: 100px;
+  height: 100px;
+  background-color: lightblue;
+  border: 1px solid black;
+  transform: rotateZ(90deg);
+}                                        <--- rotateZ przewraca element na bok
 
+```
+Transitions
+```
+Add a 2 second transition effect for width changes of the <div> element.
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+}
+Specify that the transition of the <div> element should have a "ease-in-out" speed curve.
+Use the transition-timing-function property.
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  transition-timing-function: ease-in-out;
+}
+Specify that the transition of the <div> element should have a "0.5" second delay before starting.
+Use the transition-delay property.
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s;
+  transition-delay: 0.5s;
+}
+Add a 2 second transition effect for background, and transform changes of the <div> element.
+Use the transition property, with 2 sets of values (separated by comma).
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: background 2s, transform 2s;
+}
+Using the transition shorthand property, specify width changes for the <div> element should have:
+"2" second duration, "ease-in-out" speed curve, and a "0.5" second delay before starting.
+transition: property duration timing-function delay.
+div {
+  width: 100px;
+  height: 100px;
+  background: red;
+  transition: width 2s ease-in-out 0.5s;
+}
+```
+Animations
+```
+Add a 2 second animation for the <div> element, which changes the color from red to blue. Call the animation "example"
+Use the @keyframes rule, and the animation-name, and animation-duration properties.
+div {
+  width: 100px;
+  height: 100px;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 2s;
+}
+
+@keyframes example {
+  from {background-color: red;}
+  to {background-color: blue;}
+}                                      <--- element div(kwadrat) zmienia kolor na 2 sekundy
+Add the following 5 steps to the animation "example" (using 0%, 25%, 50%, 75%, and 100%):
+
+    0% - Set background color to "red", left position to "0px", top position to: "0px"
+    25% - Set background color to "blue", left position to "0px", top position to: "200px"
+    50% - Set background color to "green", left position to "200px", top position to: "200px"
+    75% - Set background color to "yellow", left position to "200px", top position to: "0px"
+    100% - Set background color to "red", left position to "0px", top position to: "0px"
+
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+}
+
+@keyframes example {
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: blue; left:0px; top:200px;}
+  50%  {background-color: green; left:200px; top:200px;}
+  75%  {background-color: yellow; left:200px; top:0px;}
+  100% {background-color: red; left:0px; top:0px;}
+}                                                    <--- sprawia to, ze element div(kwadrat) przemieszcza się i zmienia kolor
+Specify that the animation of the <div> element should have a "1" second delay before starting.
+Use the animation-delay property.
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-delay: 1s;
+}
+
+@keyframes example {
+  0%   {background-color: red; left:0px;}
+  50%  {background-color: yellow; left:200px;}
+  100% {background-color: red; left:0px;}
+}                                                    <-- element div przemieszcza sie w bok i zmienia kolor
+Specify that the animation of the <div> element should continue to loop for ever.
+Use the animation-iteration-count property.
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes example {
+  0%   {background-color: red; left:0px;}
+  50%  {background-color: yellow; left:200px;}
+  100% {background-color: red; left:0px;}
+}                                        <--- animacja jest zapętlona i działa cały czas, kwadrat cały czas przesuwa się z prawa na lewo
+                                              i z powrotem i zmienai kolor
+Specify that the animation of the <div> element should alternate between running forwards and backwards.
+Use the animation-direction property.
+div {
+  width: 100px;
+  height: 100px;
+  position: relative;
+  background-color: red;
+  animation-name: example;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;   
+}
+
+@keyframes example {
+  0%   {background-color: red; left:0px; top:0px;}
+  25%  {background-color: blue; left:0px; top:200px;}
+  50%  {background-color: green; left:200px; top:200px;}
+  75%  {background-color: yellow; left:200px; top:0px;}
+  100% {background-color: red; left:0px; top:0px;}
+}                                                                  < -- na początku animacja działą w tym kierunku: w dół w prawo, do góry, w lewo i t.d.w kółko
+                                                                        po zmianie animation-direction: a teraz w dół w prawo, do góry, w lewo, 
+                                                                        ale potom w prawo, w dół, w lewo, do góry (czyli nie w kółko, a zmienia kierunek)
 ```
