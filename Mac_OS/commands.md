@@ -1,4 +1,4 @@
-Set system date and time in Recovery in Terminal command for checking date and time:
+Set system date and time in Recovery in Terminal using the command for checking date and time:
 
 ```
 $ date
@@ -12,7 +12,7 @@ enter the comand and this return:
 ```
 date -u 0728074220
 ```
-Check again if date and tine are correct using first command:
+Check again if date and time are correct using first command:
 ```
 $ date
 ```
