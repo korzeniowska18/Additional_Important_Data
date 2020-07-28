@@ -48,19 +48,19 @@ Uruchom aplikację jako docker, w terminalu:
 make docker_run
 
 ```
-# zweryfikuj, że docker jest uruchomiony
+zweryfikuj, że docker jest uruchomiony
 
 ```
 docker ps
 
 ```
-# sprawdź czy aplikacje działa poprawnie
+sprawdź czy aplikacje działa poprawnie
 
 ```
 curl 127.0.0.1:5000
 
 ```
-# jeśli nie widzisz dockera, kiedy uruchamiasz: docker ps:
+jeśli nie widzisz dockera, kiedy uruchamiasz: docker ps:
 
 ```
 docker ps -a
@@ -77,13 +77,13 @@ make docker_run
 
 ```
 Przydatne komendy docker-a (pamiętamy o sudo):
-# możemy uruchomieć basha w naszym dockerze
+możemy uruchomieć basha w naszym dockerze
 
 ```
 docker run -it nazwa_app /bin/bash
 
 ```
-# uruchamiamy bash-a w działającym dockerze z naszą aplikcją:
+uruchamiamy bash-a w działającym dockerze z naszą aplikcją:
 
 ```
 docker exec -it nazwa_app-dev /bin/bash
@@ -108,7 +108,7 @@ services:
 ```
 Przejrzyj logi TravisCI i sprawdź czy docker jest budowany.
 
-# komendy do zatrzymania i uruchomienia ponownie dockera:
+komendy do zatrzymania i uruchomienia ponownie dockera:
 
 ```
 docker stop nazwa_app-dev
