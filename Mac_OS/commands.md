@@ -16,3 +16,8 @@ Check again if date and time are correct using first command:
 ```
 $ date
 ```
+Empty Trash if some locked file and impossible empty in standard way:
+
+```
+$ sudo rm -rf ~/.Trash/*
+```
