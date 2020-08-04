@@ -43,7 +43,14 @@ Net::DNS::RR::CDNSKEY (3pm) - DNS CDNSKEY resource record
 man -w ls   - location of the command 
 /usr/share/man/man1/ls.1.gz
 
+man bash
 
+        polecam aby uzyskać więcej informacji
+
+man tcsh
+
+        polecam aby uzyskać więcej informacji
+sudo apt install tcsh
 
 --help – każdy program ma opcję --help lub -h, która wyświetla krótką pomoc
 jakis_program --help, vim --help
@@ -279,6 +286,8 @@ man bash
 man tcsh
 
         polecam aby uzyskać więcej informacji
+sudo apt install tcsh
+
 
 
 
