@@ -288,11 +288,154 @@ man tcsh
         polecam aby uzyskać więcej informacji
 sudo apt install tcsh
 
+Edytory
+
+vim – zaawansowany edytor tekstowy w trybie tekstowym
+
+    Vi iMproved - nowa wersja znanego edytora Vi. Posiada
+
+        podświetlanie składni dla wielu języków programowania
+        możliwość edycji kilku plików na raz
+        bogatego helpa
+        bardzo zaawansowane funkcje edycji
+    To quit the vi editor without saving any changes you've made:
+    If you are currently in insert or append mode, press Esc.
+    Press : (colon). The cursor should reappear at the lower left corner of the screen beside a colon prompt.
+    Enter the following: q!
+    This will quit the editor, and all changes you have made to the document will be lost.
+    
+    Insert - Esc - Esc -i
+    :w [newfilename] - rename an existing file by adding the new name after the commands.
+    :wq  - save a file and exit the text editor
+    :x - This will save the changes and exit
+    :q!  - exit without saving the changes
+        ...
+
+gvim – vim w trybie graficznym
+
+can be installed with:
+
+sudo apt install vim       
+sudo apt install vim-gtk3  
+sudo apt install vim-tiny  
+sudo apt install neovim-qt 
+sudo apt install vim-athena
+sudo apt install vim-gtk   
+sudo apt install vim-nox
+
+emacs – zaawansowany edytor tekstowy w trybie graficznym
+
+    Emacs podobnie jak Vim jest wszechstronnym edytorem obsługującym wiele języków i posiadającym bogate funkcje.
+
+uemacs – edytor tekstowy w trybie tekstowym
+
+    Micro Emacs jest tekstową wersją Emacsa
+
+joe – prosty edytor tekstowy
+
+    Joe's Own Editor. Nadaje się do pisania prostych dokumentów
+
+mcedit – edytor tekstowy w trybie tekstowym
+
+    mcedit jest wbudowanym w Midnight Commandera edytorem.
+
+    Posiada m.in. podświetlanie składni.
+    
+ Sieć
+
+pine – program do obsługi poczty
+
+    Bardzo dobry, szybki i wygodny program do sprawdzania i wysyłania poczty elektronicznej. Jego największą zaletą jest to, że działa w trybie tekstowym, więc można uruchomić go na zdalnym terminalu.
+
+ssh – program do zdalnego logowania używając szyfrowanego połączenia
+
+    Najważniejszy sieciowy program. Umożliwia logowanie się na dowolny komputer na świecie, przy czym połączenie jest bezpieczne dzięki algorytmom szyfrującym opartym na kluczach RSA.
+
+        ssh anatres – zaloguje mnie na 'antares'a
+        ssh ja@anatres – zaloguje mnie jako użytkownika 'ja' na 'antares'a
+        ssh ja@antares komenda – zaloguje mnie tylko by wykonać na 'antares'ie komendę
+
+scp – program do kopiowania plików używając szyfrowanego połączenia SSH
+
+    scp łączy się z podanym serwerem i kopiuje podane pliki między oboma komputerami
+
+    'scp'do połączenia używa programu 'ssh'
+
+        scp plik ja@antares:~/moje_pliki/ – skopiuje plik do mojego katalogu na antaresie ~/moje_pliki/
+        scp ja@antares:/var/log/plik . – do bieżącego katalogu skopiuje podany plik z antaresa
+
+rlogin – prosty protokół zdalnego logowania
+
+        rlogin antares – zaloguje mnie na 'antares'a
+
+ping – program diagnostyczny sprawdzający czy istnieje połączenie sieciowe z danym komputerem.
+
+        ping antares.astrouw.edu.pl – sprawdzamy czy antares odpowiada (i jak szybko)
+
+Dyski
+
+df – wypisuje rozmiary i ilość dostępnego miejsca na zamontowanych dyskach (w kilobajtach i w procentach)
+
+        df
+        df /dev/sda1 – ogranicz wyniki tylko do jednej partycji
+        df -h – wyświetl rozmiary w wygodnych dla użytkownika jednostkach (human readable)
+        df -m – rozmiary w megabajtach
+
+du – policz rozmiary katalogów i plików zawartych w podanym katalogu
+
+        du – rozmiar obecnego katalogu
+        du katalog – policz rozmiar podanego katalogu
+        du -s – wypisz tylko sumę, a nie rozmiary poszczególnych podkatalogów
+        du -sm – wypisz tylko sumę dla każdego katalogu i podaj rozmiar w megabajtach
+        du -sm dir* | sort -n – posortuj wyniki od najmniejszego do największego z podanych katalogów
 
 
+Środowisko
+
+which – wypisuje gdzie znajduje się plik z programem o podanej nazwie
+
+        which ls – zlokalizuj plik, który zostanie uruchomiony po wywołaniu komendy 'ls'
+
+env – wypisuje aktualne wartości wszystkich zmiennych środowiskowych
+
+alias – ustawia i wypisuje definicje skrótowych komend ('aliasów'), które są obecnie ustawione w środowisku
+
+        alias – wypisuje aliasy
+        alias ls 'ls --color=auto' – definiuje nowy alias o nazwie 'ls' i podanej treści
 
 
+Urządzenia systemowe
 
+/dev/null – studnia bez dna. Urządzenie do którego możemy pisać do woli, a wszystko co wpiszemy przepada.
+
+        find -name "plik.*" 2>/dev/null – jeśli wsród wyników szukania nie chcemy oglądać komunikatów o błędach
+        latex plik.tex >/dev/null – program wykona wszystkie czynności, ale nie zaśmieci nam konsoli logami
+        licz >/dev/null 2>/dev/null & – jeśli chcemy puścić program w tle, a potem się wylogować (zamknąć konsole), musimy przekierować wyjścia z programu tak, aby nie próbował pisać do nieistniejącego już urządzenia. Urządzenie 'null' jest zawsze.
+
+/dev/zero – składnica zer. Jest to urządzenie do czytania, które nigdy się nie kończy. Można z niego wczytać dowolną liczbę bajtów, a wszystkie będą równe zero.
+
+        dd if=/dev/zero of=zera.txt count=1000 – wczyta tysiąc zer do pliku 'zera.txt'.
+        cat /dev/zero – radzę nie próbować
+        head -c 10 /dev/zero > zera.txt – wypisze pierwsze 10 bajtów z '/dev/zero' do pliku 'zera.txt'. W wyniku mamy plik z dziesięcioma zerami.
+
+/dev/random – zbiór liczb losowych. Jest to urządzenie do czytania, które daje prawdziwie losowe dane. Korzysta przy tym z systemowego zbiornika entropii, który jest uzupełniany dzięki różnym przejawom aktywności użytkownika. Zbiór ten może się wyczerpać, dlatego nie należy z niego czytać wielu liczb na raz.
+
+        od -t x1 -N 100 /dev/random – wypisze pierwsze 100 losowych bajtów z urządzenia /dev/random na ekran (w systemie szesnastkowym)
+
+/dev/urandom – zbiór liczba pseudolosowych. Jest to urządzenie do czytania, które podaje liczby pseudolosowe. Ma ich do dyspozycji dowolnie dużo.
+
+        od -t d1 -N 100 /dev/urandom – wypisze pierwsze 100 bajtów z urządzenia /dev/urandom na ekran (w systemie dziesiętnym)
+
+/dev/stdin – standardowe wejście aktualnego procesu. Każdy proces który próbuje czytać z tego urządzenia, dostanie zawartość własnego wejścia.
+
+        echo "ma kota" | cat ala.txt /dev/stdin – program cat połączy zawartość pliku ala.txt z tym co dostał na standardowe wejście
+
+/dev/stdout – standardowe wyjście aktualnego programu. Gdy proces wypisze coś do pliku /dev/stdout, pojawi się to na jego standardowym wyjściu.
+
+        a2ps --output plik.ps plik.txt – program a2ps stworzy dokument postscript w pliku plik.ps
+        a2ps --output /dev/stdout plik.txt – program a2ps wypisze dokument na ekran (jego standardowe wyjście)
+
+/dev/stderr – standardowe wyjście dla błędów aktualnego programu. Gdy proces wypisze coś do pliku /dev/stderr, pojawi się to na jego standardowym wyjściu dla błędów. 
 
 
 ```
