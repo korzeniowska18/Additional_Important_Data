@@ -13,10 +13,36 @@ $ chmod ugo=r
 $ chmod u=x
 $ chmod ugo=rwx
 
+chmod – zmienia prawa dostępu do pliku
+
+    grupy użytkowników: u - user, g - group, o - others, a - all
+
+    prawa dostępu: r - read, w - write, x - execute
+
+        chmod o+r plik – udziel innym prawo do czytania pliku
+        chmod a-x plik – zabierz wszystkim prawo do wykonywania pliku
+        chmod g=rw plik – ustaw prawa do czytania i pisania dla swojej grupy
+        chmod -R go+w katalog – ustawia prawa wszystkim plikom w katalogu i jego podkatalogach (--recursive)
+drwx - means the entry is a directory in which the owner has read, write and execute permissions and no one else has any permissions
 ```
 
 man – wyświetla stronę manuala dla polecenia 'program'
-man program, man echo, man calendar
+man program, man echo, man calendar, man printf, man 2 intro, man time, man credentials, 
+man -f ls -  malist directory contents
+man -f whoami - print effective userid
+man -f echo - display a line of text
+man -k cd - display and discribe processing :
+
+apt-cdrom (8)        - APT CD-ROM management utility
+cd-create-profile (1) - Color Manager Profile Creation Tool
+gcov-dump (1)        - offline gcda and gcno profile dump tool
+hex2hcd (1)          - firmware converter
+hipercdecode (1)     - Decode a HIPERC stream into human readable form.
+Net::DNS::RR::CDNSKEY (3pm) - DNS CDNSKEY resource record
+
+man -w ls   - location of the command 
+/usr/share/man/man1/ls.1.gz
+
 
 
 --help – każdy program ma opcję --help lub -h, która wyświetla krótką pomoc
@@ -141,6 +167,118 @@ less – wygodne i szybkie przeglądanie plików tekstowych
 
 touch – zmienia czas dostępu i modyfikacji pliku, lub jeśli plik nie istnieje - tworzy go.
 touch plik
+
+
+cp – kopiuje plik
+
+        cp plik1 plik2 – stworzy ./plik2 identyczny z plik1
+        cp plik3 ../katalog/jakis/ – stworzy plik ../katalog/jakis/plik3
+        cp pom.* podkatalog/ – skopiuje wszystkie pliki zaczynające się na 'pom.' do ./podkatalog/
+        cp plik5 ~/katalog/jakis/pliczek – stworzy plik ~/katalog/jakis/pliczek
+
+mv – przesuwa plik (tym samym służy również do zmiany nazwy)
+
+        mv plik1 plik2 – zmieni nazwę pliku z ./plik1 na plik2
+        mv plik3 ../katalog/jakis/ – przesunie plik do ../katalog/jakis/plik3
+        mv plik4 podkatalog/ – przesunie plik ./podkatalog/plik4
+        mv plik5 ~/katalog/jakis/pliczek – przesunie i zmieni nazwę ~/katalog/jakis/pliczek
+
+rm – kasuje plik
+
+        rm plik -
+        rm -r katalog – kasuje wszystko w katalogu i wszystkie jego podkatalogi (--recursive)
+        rm -f plik – nie pyta się czy skasować (--force)
+
+mkdir – tworzy katalog
+
+        mkdir moj_nowy_katalog
+        mkdir /home/users/ja/moj_nowy_katalog
+
+rmdir – usuwa pusty katalog
+
+        rmdir katalog
+
+chmod – zmienia prawa dostępu do pliku
+
+    grupy użytkowników: u - user, g - group, o - others, a - all
+
+    prawa dostępu: r - read, w - write, x - execute
+
+        chmod o+r plik – udziel innym prawo do czytania pliku
+        chmod a-x plik – zabierz wszystkim prawo do wykonywania pliku
+        chmod g=rw plik – ustaw prawa do czytania i pisania dla swojej grupy
+        chmod -R go+w katalog – ustawia prawa wszystkim plikom w katalogu i jego podkatalogach (--recursive)
+
+locate – wypisuje gdzie ostatnio, na tym komputerze, był widziany plik o podanej nazwie (lub fragmencie nazwy)
+
+locate raport.txt – locate pdf
+
+find – przejrzyj katalog w poszukiwaniu danego pliku
+
+        find . -name raport.txt
+        find /home/user -name "rap*xt"
+
+
+> – przekierowanie wyjścia z programu do pliku.
+
+    Standardowym wyjściem każdego programu jest ekran (konsola tekstowa) a standardowym wejściem jest klawiatura. Można te wejścia i wyjścia przekierowywać dowolnie.
+
+        echo "ala ma kota" > plik.txt – wyjście z programu echo wpisze do pliku plik.txt
+        ls -l > lista.dat – wypisze listę plików do pliku lista.dat
+
+>> – doklejenie wyjścia z programu na koniec pliku
+
+        echo "ala ma psa" >> plik.txt – dopisze "ala ma psa" na koniec pliku plik.txt
+        ls -l > lista.dat – wypisze listę plików do pliku lista.dat
+
+| – przekierowanie wyjścia jednego programu na wejście drugiego
+
+        cat plik.txt | wc -l – cat wypisuje plik.txt na wyjście które przekierowujemy na program liczący wiersze.
+        ls -l | lpr – program drukujący 'lpr' dostanie na wejście listę plików
+        cat plik.txt | tac | grep "coś" | head > cosie.txt – wypisanie pliku.txt na program 'tac', który odwraca kolejność wierszy, wynik tego przekierowany na 'grep', który wypisze tylko linie zawierające słowo "coś", wynik tego wysłany na program 'head', który pośle dalej tylko pierwsze 10 wierszy na wyjście, które przekierowaliśmy do pliku cosie.txt.
+
+>! – przekierowanie do pliku. Działa podobnie jak >, ale kontynuuje nawet gdy plik już istnienie. Działa w "tcsh".
+
+        echo "ala ma kota" > plik.txt – gdy plik.txt istnieje, ta komenda może się nie powieść.
+        echo "ala ma kota" >! plik.txt – konieczne będzie użycie wykrzyknika >!
+        echo "ala ma kota" >| plik.txt – to samo tylko w 'bash'
+
+< – przekierowanie pliku jako standardowego wejścia.
+
+        szachy < ruchy.txt – jeśli program szachy przyjmuje ruchy na standardowe wejście, możemy te ruchy spisać do pliku i podać programowi w ten sposób
+        cat ruchy.txt | szachy – to samo można też zrobić tak
+
+<< – podanie na wejście następujących później linii.
+
+        szachy << DO_KONCA
+        E2-B4
+        H5-A1
+        C6-F5
+        DO_KONCA – podanie tzw. dokumentu w miejscu. Wszystkie następujące linie między etykietami 'DO_KONCA' będą podane na standardowe wejście programu 'szachy'.
+        echo "E2-B4
+        H5-A1
+        C6-F5" | szachy – to samo można też zrobić tak
+        echo -e "E2-B4\nH5-A1\nC6-F5" | szachy – to samo można też zrobić tak
+
+2> – przekierowanie standardowego wyjścia dla błędów do pliku. Oprócz standardowego wyjścia i wejścia, każdy program ma jeszcze standardowe wyjście dla błędów. Je też możemy przekierowywać, na przykład w inne miejsce niż wyjście zwykłe. Działa w "bash", nie w "tcsh".
+
+        find -name "plik.*" >znalezione.log 2>bledy.log – pliki znalezione przez 'find' wylądują w znalezione.log, komunikaty o błędach nie zaciemnią nam wyniku i wpiszą się do innego pliku – bledy.log
+        cp -r dane/ backup/ 2>error.log – jeśli podczas kopiowania całego katalogu wystąpią błędy, wszystkie komunikaty zostaną wpisane do error.log
+        ( ls > plik.log ) >& plik.err – w 'tcsh' nie można przekierować samego wyjścia dla błędów, stąd konieczność takiej konstrukcji.
+
+&> lub >& – przekierowanie obu wyjść do pliku.
+
+        ls >& plik.log – standardowe wyjście i standardowe wyjście dla błędów jest przekierowane do plik.log
+        ls >plik.log 2>&1 – to samo, ale działa tylko w 'bash'. Przekierowanie wyjścia, a potem skopiowanie go na wyjście dla błędów.
+        ls &> plik.log – to samo co >& ale w notacji bardziej właściwej dla 'bash'.
+
+man bash
+
+        polecam aby uzyskać więcej informacji
+
+man tcsh
+
+        polecam aby uzyskać więcej informacji
 
 
 
