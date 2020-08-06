@@ -36,6 +36,8 @@ $ git status
 $ git log
 $ git push origin master
 $ git pull
+$ gitk 
+$ gitg
 
 ```
 ```
