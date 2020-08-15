@@ -18,3 +18,14 @@ Istnieje wiele protokołów warstwy aplikacji, które wykorzystują transmisję 
     IRC - do czatów online
     
  ```
+
+UDP
+
+Drugim popularnym protokołem używanym w warstwie transportowej jest UDP (ang. User Datagram Protocol lub Universal Datagram Protocol). Jest to prostszy protokół, w którym komunikacja odbywa się bez nawiązywania żadnego stałego połączenia pomiędzy aplikacjami. Wszystkie pakiety wysyłane są niezależnie od siebie.
+```
+Dzięki swojej prostocie UDP jest szybsze niż TCP. 
+Z drugiej jednak strony, nie zapewnia takiej niezawodności działania jak TCP. 
+Przede wszystkim UDP nie gwarantuje, że wiadomości rzeczywiście dotarły do odbiorcy. 
+UDP nie dostarcza pakietów w takiej samej kolejności, w jakiej zostały one wysłane. 
+Ciężar uporządkowania otrzymywanych wiadomości i sprawdzenia czy nie nastąpiły błędy transmisji spoczywa na otrzymującej je aplikacji.
+```
