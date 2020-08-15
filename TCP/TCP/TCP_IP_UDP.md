@@ -29,3 +29,16 @@ Przede wszystkim UDP nie gwarantuje, że wiadomości rzeczywiście dotarły do o
 UDP nie dostarcza pakietów w takiej samej kolejności, w jakiej zostały one wysłane. 
 Ciężar uporządkowania otrzymywanych wiadomości i sprawdzenia czy nie nastąpiły błędy transmisji spoczywa na otrzymującej je aplikacji.
 ```
+
+Zastosowanie UDP
+
+UDP jest preferowane jeśli przesyłane pakiety danych są nieistotne lub komunikacja musi odbywać się z wyjątkowo dużą prędkością. Przykładowo UDP jest używane do przesyłania zapytań DNS (z powodu bardzo dużej liczby zapytań kierowanych do relatywnie niewielu serwerów DNS). UDP jest używane również podczas transmisji audio i video, gdzie utrata pewnej liczby pakietów nie jest bardzo uciążliwa dla odbiorcy.
+
+Istnieje wiele protokołów warstwy aplikacji, które używają UDP, na przykład:
+
+    DNS
+    DHCP
+    TFTP
+    SNMP
+    RIP
+    VOIP
