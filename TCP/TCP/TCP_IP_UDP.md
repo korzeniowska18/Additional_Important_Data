@@ -19,6 +19,18 @@ Istnieje wiele protokołów warstwy aplikacji, które wykorzystują transmisję 
     
  ```
 
+TCP
+
+Najpopularniejszym protokołem warstwy transportowej jest TCP (ang. Transmission Control Protocol). Podczas transmisji danych, TCP zestawia połączenie pomiędzy komunikującymi się stronami (ang. connection oriented) przez zainicjowanie tzw. sesji (ang. session). TCP jest protokołem niezawodnym (ang. reliable), w którym odbiorca potwierdza otrzymanie każdej wiadomości (ang. acknowledge). Wszystkie wiadomości dostarczane są w takiej samej kolejności, w jakiej zostały wysłane (ang. ordering).
+
+Wszystkie cechy wymienione powyżej są zapewniane prze warstwę TCP. Oznacza to, że TCP może współdziałać z innymi, bardziej zawodnymi protokołami niższych warstw i nie powinno to afektować komunikacji z perspektywy warstwy aplikacji.
+Niezawodność TCP
+(ang. reliability)
+
+W czasie wysyłanie danych, TCP zapewnia, że wszystkie wiadomości zostały dostarczone do miejsca przeznaczenia. Odbiorca testuje każdy otrzymany pakiet pod kątem błędów transmisji (poprzez wyliczanie sumy kontrolnej danych). Jeśli wiadomość jest poprawna, odbiorca wysyła potwierdzenie (ang. acknowledgement) do nadawcy. Jeśli nadawca nie otrzyma potwierdzenia w przeciągu określonego (konfigurowalnego) czasu, to ponownie wysyła zagubiony pakiet.
+
+Po kilku nieudanych próbach, TCP zakłada, że odbiorca jest nieosiągalny i informuje warstwę aplikacji, że transmisja zakończyła się niepowodzeniem.
+
 UDP
 
 Drugim popularnym protokołem używanym w warstwie transportowej jest UDP (ang. User Datagram Protocol lub Universal Datagram Protocol). Jest to prostszy protokół, w którym komunikacja odbywa się bez nawiązywania żadnego stałego połączenia pomiędzy aplikacjami. Wszystkie pakiety wysyłane są niezależnie od siebie.
