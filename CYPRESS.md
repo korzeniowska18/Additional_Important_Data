@@ -33,3 +33,9 @@ $ node -v                    >>> v8.10.0
 $ git --version              >>> git version 2.17.1
 
 ```
+Cypress installation:
+
+```
+$ npm install cypress --save-dev
+$ npx cypress open
+```
