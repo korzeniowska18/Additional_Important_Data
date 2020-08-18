@@ -27,10 +27,16 @@ https://code.visualstudio.com/download
 ```
 $ code -help
 $ code --version
-
+```
 
 Check Chrome version in Chrome window:
 
 ```
 $ chrome://version
+```
+Cypress installation:
+
+```
+$ npm install cypress --save-dev
+
 ```
