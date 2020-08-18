@@ -63,4 +63,51 @@ In integration folder create new file with test name: firstTest.spec.js
 * Elements inside of the "key" Web element are Child Elements
 * Elements placed at the same level side by side are Sibling Elements
 ```
+Example for Test's structure:
+
+```
+describe("My first suite"), () => {
+
+    describe("Suite section") () => {
+
+        beforeEach("code for every test", () => {
+            //repeatadly code
+    })
+    
+
+    it("first test", () => {
+
+    })
+
+    it("second test", () => {
+
+    })
+
+    it("third test", () => {
+
+    })
+
+
+})
+
+
+
+describe("My second suite"), () => {
+
+    it("first test", () => {
+
+    })
+
+    it("second test", () => {
+
+    })
+
+    it("third test", () => {
+
+    })
+
+
+})
+```
+
 
