@@ -110,4 +110,52 @@ describe("My second suite"), () => {
 })
 ```
 
+How to use Locators:
 
+```
+/// <reference types="cypress" />
+
+describe("My first suite", () => {
+
+    it("first test", () => {
+
+        cy.visit('/')
+        cy.contains('Forms').click()
+        cy.contains('Form Layouts').click()
+
+        //by Tag Name
+        cy.get('input')
+
+        //by ID
+        cy.get('#inputEmail1')
+
+        //by Class Name
+        cy.get('.input-full-width')
+
+        //by Attribute Name
+        cy.get('[placeholder]')
+
+        //by Attribute Name and value
+        cy.get('[placeholder="Email"]')
+
+        //by Class Value
+        cy.get('[class="input-full-width size-medium shape-rectangle"]')
+
+        //by Tag name Attribute with value
+        cy.get('input[placeholder="Email"]')
+
+        //by two different attributes
+        cy.get('[placeholder="Email"][type="email"]')
+
+        //by Tag name, Attribute with value, ID and class name
+        cy.get('input[placeholder="Email"]#inputEmail1.input-full-width')
+
+        //The most recomended way by Cypress(for elements which created own attributes, 
+        //this is own locator and with this locator tests will always work
+        cy.get('[data-cy="imputEmail1"]')
+
+    })
+
+})
+```
+In the test results we can to see how much elements with this Name found. 
