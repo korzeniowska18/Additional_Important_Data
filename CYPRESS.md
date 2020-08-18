@@ -2,6 +2,12 @@
 
 to framework JavaScript do testów e2e (end to end), który skupia się na tym aby testowanie aplikacji było prostsze i szybsze.
 
+My Notes according to course from Udemy.com:
+
+https://www.udemy.com/course/cypress-web-automation-testing-from-zero-to-hero/learn/lecture/18179588?start=0#overview
+
+I can recommend this course. 
+
 # Cypress VS Selenium
 
 * [complete framework](#complete-framework)
@@ -175,3 +181,33 @@ describe("My first suite", () => {
 })
 ```
 In the test results we can to see how much elements with this Name found. 
+
+How to find Web Elements:
+
+```
+
+    it.only('second test', () => {
+
+        cy.visit('/')
+        cy.contains('Forms').click()
+        cy.contains('Form Layouts').click()
+
+        cy.get('[data-cy="signInButton"]')
+        cy.contains('Sign in')
+        cy.contains('[status="primary"]', 'Sign in')
+
+        cy.get('#inputEmail3')
+            .parents('form')
+            .find('button')
+            .should('contain', 'Sign in')
+            .parents('form')
+            .find('nb-checkbox')
+            .click()
+
+        cy.contains('nb-card', 'Horizontal form').find('[type="email"]')
+
+
+    })
+
+})
+```
