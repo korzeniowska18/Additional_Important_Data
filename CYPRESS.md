@@ -51,6 +51,8 @@ For example:
 }
 ```
 In integration folder create new file with test name: firstTest.spec.js
+
+# The HTML DOM (Document Object Model)
 ```
 * HTML DOM consists of: HTML tags, HTML attributes and Attribute values
 * "Class" and "Values" are also HTML attribute names
