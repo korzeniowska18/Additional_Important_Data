@@ -39,3 +39,26 @@ Cypress installation:
 $ npm install cypress --save-dev
 $ npx cypress open
 ```
+https://docs.cypress.io/guides/references/configuration.html#Options
+
+For example:
+```
+{
+    "baseUrl": "https://localhost:4200",
+    "ignoreTestFiles": "**/examples/*",
+    "viewportHeight": 768,
+    "viewportWidth": 1024
+}
+```
+In integration folder create new file with test name: firstTest.spec.js
+```
+* HTML DOM consists of: HTML tags, HTML attributes and Attribute values
+* "Class" and "Values" are also HTML attribute names
+* "Class" attribute can have several values and each value separated by space
+* HTML tags usually come in pairs with opening and closing tag. Closing tag has the same name and forward slash.
+* Value in between angle brackets >here< is a plain text
+* Elements above the "key" Web element are Parent Elements
+* Elements inside of the "key" Web element are Child Elements
+* Elements placed at the same level side by side are Sibling Elements
+```
+
