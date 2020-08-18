@@ -15,7 +15,23 @@ to framework JavaScript do testów e2e (end to end), który skupia się na tym a
 * [single domain and single tab](#single-domain-and-single-tab)
 * [not friendly with iFrames](#not-friendly-with-iFrames)
 
-What we need for Cypress:
+Co odróżnia cypressa od innych narzędzi?
+
+* Nie opiera się na Selenium – zbudowany jest na nowej architekturze. Cypress działa w tej samej pętli uruchomieniowej, co twoja aplikacja.
+* Koncentruje się na sprawnym wykonywaniu testów – jego użycie jest intuicyjne i proste.
+* Jest uniwersalny – działa prawdopodobnie na wszystkim co może być uruchomione w przeglądarce. Dobrze powinien sobie poradzić nawet na starszych aplikacjach, 
+  nie tylko tych używających nowoczesnych frameworków.
+* Testy są pisane w javascripcie – dla jednych wada dla innych zaleta ale cypress jest oparty na javascripcie.
+* Wszystko czego potrzeba w 1 narzędziu – Nie trzeba instalować osobnych narzędzi aby uruchomić testy.
+* Narzędzie zarówno dla programistów jak i QA.
+* Cypress jest szybki – pozwala na równoczesny development i testowanie.
+
+More:
+
+https://devenv.pl/cypress-wprowadzenie/
+
+
+What we need for using Cypress:
 
 ```
 install Chrome browser
