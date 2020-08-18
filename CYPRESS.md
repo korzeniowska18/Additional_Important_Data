@@ -19,10 +19,12 @@ What we need for Cypress:
 
 ```
 install Chrome browser
-install Node.js
-install Git
+install Node.js                       >>> $ sudo apt install nodejs
+install Git                           >>> $ sudo apt-get install git
 install IDE(Visual Studio Code)
 ```
+https://github.com/nodesource/distributions/blob/master/README.md#debinstall
+
 How to check versions:
 
 ```
