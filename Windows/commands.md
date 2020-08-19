@@ -28,3 +28,32 @@ TCP    127.0.0.1:4200         0.0.0.0:0              LISTENING       15836
 $ $ taskkill -f /pid 15836
 SUCCESS. The process with PID 15836 has been terminated.
 ```
+How to check IP and all Network's settings:
+
+```
+$ ipconfig
+```
+How to check your business domain to look up its server's IP address.
+
+```
+$ Nslookup
+Default Server:  UnKnown
+Address:  192.168.100.1
+```
+How to find the IP address of each server between your computer and some website.
+
+```
+$ tracert google.com
+
+Tracing route to google.com [172.217.16.46]
+over a maximum of 30 hops:
+
+  1     2 ms     1 ms     2 ms  192.168.100.1
+  
+$ tracert onet.pl
+
+Tracing route to onet.pl [213.180.141.140]
+over a maximum of 30 hops:
+
+  1     2 ms     2 ms     2 ms  192.168.100.1
+```
