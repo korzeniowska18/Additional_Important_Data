@@ -238,3 +238,29 @@ How to find Web Elements:
 
 })
 ```
+How to save some methods(then, wrap) and use it later:
+
+```
+//This is Cypress style >>>
+
+        //cy.contains('nb-card', 'Using the Grid').find('[for="inputEmail1"]').should('contain', 'Email')
+        //cy.contains('nb-card', 'Using the Grid').find('[for="inputPassword2"]').should('contain', 'Password')
+
+        //cy.contains('nb-card', 'Basic form').find('[for="exampleInputEmail1"]').should('contain', 'Email address')
+        //cy.contains('nb-card', 'Basic form').find('[for="exampleInputPassword1"]').should('contain', 'Password')
+        
+        // This is Jake Query style (JQuery)//
+
+        cy.contains('nb-card', 'Using the Grid').then( firstForm => {
+            const EmailLabelFirst = firstForm.find('[for="inputEmail1"]').text()
+            const PasswordLabelFirst = firstForm.find('[for="inputPassword2"]').text()
+            expect(EmailLabelFirst).to.equal('Email')
+            expect(PasswordLabelFirst).to.equal('Password')
+
+            cy.contains('nb-card', 'Basic form').then( secondForm => {
+                const PasswordSecondText = secondForm.find('[for="exampleInputPassword1"]').text()
+                expect(PasswordLabelFirst).to.equal(PasswordSecondText)
+
+                cy.wrap(secondForm).find('[for="exampleInputPassword1"]').should('contain', 'Password')        >>> Cypress style
+
+            })
