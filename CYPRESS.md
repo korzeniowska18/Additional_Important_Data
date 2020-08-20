@@ -60,7 +60,34 @@ Cypress installation:
 ```
 $ npm install cypress --save-dev
 $ npx cypress open
+$ npm start              >>> start application
 ```
+How to Update Cypress:
+
+```
+To update Cypress:
+
+Quit this app.
+If using npm, run 
+$ npm install --save-dev cypress@5.0.0
+If using yarn, run 
+$ yarn upgrade cypress@5.0.0
+Run 
+$ node_modules/.bin/cypress open >>> to open the new version.
+```
+Other way for update Cypres:
+```
+open in app in VSC file: 
+package.json
+find line with:
+"cypress": "^4.12.1"    >>> change version for available version
+"cypress": "^5.0.0"
+Open Terminal:
+$ npm install            >>> after the process finish next command
+$ npx cypress open       >>> we will to see new updated version, in Changelog we can see all changing in new version(new features, bugs fixed)
+                             this can be usefull information
+```
+
 https://docs.cypress.io/guides/references/configuration.html#Options
 
 For example:
