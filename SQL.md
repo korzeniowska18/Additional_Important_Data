@@ -404,6 +404,22 @@ INT - liczba całkowita
 UPDATE tabela SET model='Corsa' 
 WHERE model='Astra'
 
+2. Podstawowe typy danych w MySQL
+```
+1. Logiczne
+BOOL, BOOLEAN: zero jest uważane za fałsz, wartości niezerowe są uważane zaprawdę
+2. Tekstowe
+CHAR(n): ciąg znaków o ustalonej długości. Długość ustalana jest poprzez parametr n i wynosi od 0 do 255, domyślnie 1
+VARCHAR(n): ciąg znaków o zmiennej długości, którego zakres maksymalny określa wartość n
+TEXT(n): ciąg znaków o maksymalnej długości 65535 bajtów
+ENUM(n1, n2, n3): typ danych, który może przyjąć tylko jedną wartość z listy podanych możliwych wartości. Jeśli podana zostanie wartość, której nie ma na liście wpisana zostanie wartość pusta
+3. Liczbowe
+INT(n): średnia liczba całkowita. Zakres wynosi od -2147483648 do 2147483647. Parametr n oznacza maksymalną wartość (max.255)
+TINYINT(n): Bardzo mała liczba całkowita. Zakres wynosi od -128 do 127. Zakres bez znaku wynosi od 0 do 255. Parametr n określa maksymalną szerokość wyświetlania (która wynosi 255)
+FLOAT(n): Liczba zmiennoprzecinkowa 
+4. Data i czas
+DATETIME(n): Kombinacja daty i godziny. Format RRRR-MM-DD gg:mm:ss. Obsługiwany zakres to od 1000-01-01 00:00:00 do 9999-12-31 23:59:59
+```
 ## SQL servers
   MySQL
   SQLite
@@ -435,7 +451,21 @@ WHERE model='Astra'
   \h - wywołanie funkcji
   Q - wyjść
   
+  lub:
+  ```
+$ sudo apt-get update
+$ sudo apt-get install mysql-server mysql-client      >>> instalacja niezbędnych pakietów
+$ sudo mysql –u root –p                               >>> połączenie z serwerem
+```
+wyświetlamy dostępne bazy danych:
 
+```
+mysql> show databases;
+```
+https://github.com/AndrejPHP/w3schools-database/blob/master/w3schools.sql
+
+  
+  
 
 
  
