@@ -461,12 +461,13 @@ $ sudo apt-get update
 $ sudo apt-get install mysql-server mysql-client      >>> instalacja niezbędnych pakietów
 $ sudo mysql –u root –p                               >>> połączenie z serwerem
 ```
-wyświetlamy dostępne bazy danych:
+wyświetlamy dostępne bazy danych i dane:
 
 ```
 show databases;
 use database_name;
 show tables;
+show columns from [table name]; 
 ```
 https://github.com/AndrejPHP/w3schools-database/blob/master/w3schools.sql
 
