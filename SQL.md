@@ -14,6 +14,10 @@ operacji takich jak:
 - usuwanie
 - sterowanie danymi
 ```
+MySQL COMMANDS:
+
+* [http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm](#http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
+
 # Operatory
 ```
 Podstawowym elementem SQL są OPERATORY ALGIEBRY relacyjnej.
@@ -460,7 +464,9 @@ $ sudo mysql –u root –p                               >>> połączenie z ser
 wyświetlamy dostępne bazy danych:
 
 ```
-mysql> show databases;
+show databases;
+use database_name;
+show tables;
 ```
 https://github.com/AndrejPHP/w3schools-database/blob/master/w3schools.sql
 
