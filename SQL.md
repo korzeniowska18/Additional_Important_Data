@@ -16,7 +16,7 @@ operacji takich jak:
 ```
 MySQL COMMANDS:
 
-* [http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm](#http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
+* [http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm](http://g2pc1.bu.edu/~qzpeng/manual/MySQL%20Commands.htm)
 
 # Operatory
 ```
