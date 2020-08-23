@@ -371,6 +371,21 @@ rlogin – prosty protokół zdalnego logowania
 ping – program diagnostyczny sprawdzający czy istnieje połączenie sieciowe z danym komputerem.
 
         ping antares.astrouw.edu.pl – sprawdzamy czy antares odpowiada (i jak szybko)
+```        
+$ ping -c 6 google.com
+```
+PING google.com (172.217.16.46) 56(84) bytes of data.
+64 bytes from waw02s14-in-f14.1e100.net (172.217.16.46): icmp_seq=1 ttl=117 time=15.2 ms
+64 bytes from waw02s14-in-f14.1e100.net (172.217.16.46): icmp_seq=2 ttl=117 time=23.4 ms
+64 bytes from waw02s14-in-f14.1e100.net (172.217.16.46): icmp_seq=3 ttl=117 time=16.2 ms
+64 bytes from waw02s14-in-f14.1e100.net (172.217.16.46): icmp_seq=4 ttl=117 time=17.4 ms
+64 bytes from waw02s14-in-f14.1e100.net (172.217.16.46): icmp_seq=5 ttl=117 time=16.3 ms
+64 bytes from waw02s14-in-f14.1e100.net (172.217.16.46): icmp_seq=6 ttl=117 time=19.6 ms
+
+--- google.com ping statistics ---
+6 packets transmitted, 6 received, 0% packet loss, time 5007ms
+rtt min/avg/max/mdev = 15.215/18.069/23.486/2.785 ms
+
 
 Dyski
 
