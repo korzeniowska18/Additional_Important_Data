@@ -455,7 +455,7 @@ Urządzenia systemowe
 
 ```
 Resources:
-
+```
 *[http://www.astrouw.edu.pl/~jskowron////pracownia/komendy/](http://www.astrouw.edu.pl/~jskowron////pracownia/komendy/)
 
 
