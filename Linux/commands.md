@@ -458,4 +458,61 @@ Resources:
 ```
 *[http://www.astrouw.edu.pl/~jskowron////pracownia/komendy/](http://www.astrouw.edu.pl/~jskowron////pracownia/komendy/)
 
+```
+$ sudo apt-get install net-tools
+
+$ ifconfig
+
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::1381:71bf:cf55:2a87  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:87:2c:14  txqueuelen 1000  (Ethernet)
+        RX packets 14656  bytes 19826502 (19.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2701  bytes 299629 (299.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+lo: flags=73<UP,LOOPBACK,RUNNING>  mtu 65536
+        inet 127.0.0.1  netmask 255.0.0.0
+        inet6 ::1  prefixlen 128  scopeid 0x10<host>
+        loop  txqueuelen 1000  (Local Loopback)
+        RX packets 466  bytes 49216 (49.2 KB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 466  bytes 49216 (49.2 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+$ ifconfig enp0s3
+enp0s3: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500
+        inet 10.0.2.15  netmask 255.255.255.0  broadcast 10.0.2.255
+        inet6 fe80::1381:71bf:cf55:2a87  prefixlen 64  scopeid 0x20<link>
+        ether 08:00:27:87:2c:14  txqueuelen 1000  (Ethernet)
+        RX packets 14656  bytes 19826502 (19.8 MB)
+        RX errors 0  dropped 0  overruns 0  frame 0
+        TX packets 2701  bytes 299629 (299.6 KB)
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0
+
+$ ifconfig -a                >>> dispaly all available interface, even if they are down
+
+$ ifconfig -s                >>> szort list, instead of details
+
+Iface      MTU    RX-OK RX-ERR RX-DRP RX-OVR    TX-OK TX-ERR TX-DRP TX-OVR Flg
+enp0s3    1500    14661      0      0 0          2706      0      0      0 BMRU
+lo       65536      470      0      0 0           470      0      0      0 LRU
+
+$ ifconfg -v                 >>> verbose mode, more details
+
+$ ping 10.0.2.1              >>> ping Gateway
+PING 10.0.2.1 (10.0.2.1) 56(84) bytes of data.
+From 10.0.2.15 icmp_seq=1 Destination Host Unreachable
+
+$  ping -c 5 8.8.8.8                                    >>> ping Google DNS
+PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
+64 bytes from 8.8.8.8: icmp_seq=1 ttl=117 time=29.6 ms
+64 bytes from 8.8.8.8: icmp_seq=2 ttl=117 time=20.9 ms
+64 bytes from 8.8.8.8: icmp_seq=3 ttl=117 time=24.8 ms
+64 bytes from 8.8.8.8: icmp_seq=4 ttl=117 time=28.1 ms
+64 bytes from 8.8.8.8: icmp_seq=5 ttl=117 time=31.9 ms
+
+--- 8.8.8.8 ping statistics ---
+5 packets transmitted, 5 received, 0% packet loss, time 4008ms
+rtt min/avg/max/mdev = 20.972/27.120/31.942/3.844 ms
 
