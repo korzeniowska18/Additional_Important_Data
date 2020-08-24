@@ -515,4 +515,83 @@ PING 8.8.8.8 (8.8.8.8) 56(84) bytes of data.
 --- 8.8.8.8 ping statistics ---
 5 packets transmitted, 5 received, 0% packet loss, time 4008ms
 rtt min/avg/max/mdev = 20.972/27.120/31.942/3.844 ms
+```
+Additional Tools for Net Troubleshooting:
 
+```
+$ sudo apt install inetutils-traceroute
+$ sudo apt install traceroute 
+$ traceroute                          >>> is a network troubleshooting utility which shows number of hops taken to reach destination 
+                                          also determine packets traveling path. Below we are tracing route to global DNS server IP Address 
+                                          and able to reach destination also shows path of that packet is traveling.
+                                          
+$ traceroute 8.8.8.8
+traceroute to 8.8.8.8 (8.8.8.8), 30 hops max, 60 byte packets
+ 1  _gateway (10.0.2.2)  0.298 ms  0.113 ms  0.209 ms
+ 2  * * *
+ 3  * * *
+ 4  * * *
+ 5  * * *
+ 6  * * *
+ 7  * * *
+ 8  * * *
+ 9  * * *
+10  * * *
+11  * * *
+12  * * *
+13  * * *
+14  * * *
+15  * * *
+16  * * *
+17  * * *
+18  * * *
+19  * * *
+20  * * *
+21  * * *
+22  * * *
+23  * * *
+24  * * *
+25  * * *
+26  * * *
+27  * * *
+28  * * *
+29  * * *
+30  * * *
+
+$ netstat -r                                     >>> Netstat (Network Statistic) command display connection info, routing table information etc. 
+                                                     To displays routing table information use option as -r.
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags   MSS Window  irtt Iface
+default         _gateway        0.0.0.0         UG        0 0          0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U         0 0          0 enp0s3
+link-local      0.0.0.0         255.255.0.0     U         0 0          0 enp0s3
+
+nslookup command also use to find out DNS related query. The following examples shows A Record (IP Address) of onet.pl.
+
+$ nslookup onet.pl
+
+Server:		127.0.0.53
+Address:	127.0.0.53#53
+
+Non-authoritative answer:
+Name:	onet.pl
+Address: 213.180.141.140
+
+$ route
+
+Kernel IP routing table
+Destination     Gateway         Genmask         Flags Metric Ref    Use Iface
+default         _gateway        0.0.0.0         UG    100    0        0 enp0s3
+10.0.2.0        0.0.0.0         255.255.255.0   U     100    0        0 enp0s3
+link-local      0.0.0.0         255.255.0.0     U     1000   0        0 enp0s3
+
+$ host onet.pl
+
+onet.pl has address 213.180.141.140
+onet.pl mail is handled by 1 mx.poczta.onet.pl.
+
+
+```
+Recources:
+
+https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
