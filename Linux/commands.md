@@ -444,6 +444,7 @@ Urządzenia systemowe
 /dev/stdin – standardowe wejście aktualnego procesu. Każdy proces który próbuje czytać z tego urządzenia, dostanie zawartość własnego wejścia.
 
         echo "ma kota" | cat ala.txt /dev/stdin – program cat połączy zawartość pliku ala.txt z tym co dostał na standardowe wejście
+        (ale nie zmienia zawartości pliku)
 
 /dev/stdout – standardowe wyjście aktualnego programu. Gdy proces wypisze coś do pliku /dev/stdout, pojawi się to na jego standardowym wyjściu.
 
