@@ -610,6 +610,15 @@ onet.pl mail is handled by 1 mx.poczta.onet.pl.
 
 
 ```
+```
+tree - show structure of all directories as tree
+
+tree -d - show only catalogs
+tree -d -L n - show how deep we are
+tree -d -L 1 /  -  show one level below
+tree -d -L 2 /catalog_name  - show 2 levels below this catalog
+```
+
 Recources:
 
 https://www.tecmint.com/linux-network-configuration-and-troubleshooting-commands/
