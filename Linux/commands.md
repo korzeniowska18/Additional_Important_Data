@@ -96,6 +96,11 @@ cd – zmienia aktualny katalog (od 'change directory')
         cd .. – przechodzi do katalogu o jeden wyższego w drzewie katalogów niż obecny
         cd /home/dir – z dowolnego miejsca, przechodzi do katalogu zaczynając od początku drzewa: /
         cd -  – przechodzi do poprzedniego katalogu
+        cd ../.. - move two levels above
+        $ cd /var/cache/../../
+        $ pwd
+        $ /
+
 
 pwd – wypisuje ścieżkę obecnego katalogu (od 'print working directory')
 
@@ -120,6 +125,7 @@ ls – listuje katalog
         ls plik* - select all files with name "plik"
         ls *.txt - select all files with .txt
         ls -1 *.txt - select all files with .txt and show in stock
+        ls --file-type --full-time
         
 
 
@@ -616,7 +622,40 @@ tree - show structure of all directories as tree
 tree -d - show only catalogs
 tree -d -L n - show how deep we are
 tree -d -L 1 /  -  show one level below
-tree -d -L 2 /catalog_name  - show 2 levels below this catalog
+tree -dL 2 /catalog_name  - show 2 levels below this catalog
+tree -dL 2 /etc
+tree -l /etc
+tree --du -h /etc - show tree with size of files
+tree -hF
+tree -f -pug /etc - show tree with types and permissions
+
+touch --date="2020-08-23  16:21:42" plik3.txt   - change modified date and time for file
+mkdir -p /tmp/week1/app  - created parent directories "week1" and next directory "app"
+
+Kopiowanie:
+
+cp /home/nata/plik3.txt /tmp/
+cp /home/nata/plik* /tmp/   - all files with "plik" name's copy in /tmp
+cp /home/nata/lista.dat /home/nata/lista.data /tmp/   - copy several files
+cp -r /home/nata/exercices/ /tmp/ - copy catalog "exercices" to /tmp
+cp -r /etc/xdg/autostart/ /tmp/exercices/   - copy catalog "autostart" in /tmp/exercices
+
+touch file1.txt /home/nata/
+cp /etc/xdg/autostart/at* /home/nata/file1.txt 
+
+cat file1.txt 
+
+[Desktop Entry]
+Type=Application
+Name=AT-SPI D-Bus Bus
+Exec=/usr/lib/at-spi2-core/at-spi-bus-launcher --launch-immediately
+NoDisplay=true
+X-GNOME-AutoRestart=true
+X-GNOME-Autostart-Phase=Initialization
+
+
+
+
 ```
 
 Recources:
