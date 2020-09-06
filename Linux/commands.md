@@ -31,6 +31,9 @@ man program, man echo, man calendar, man printf, man 2 intro, man time, man cred
 man -f ls -  malist directory contents
 man -f whoami - print effective userid
 man -f echo - display a line of text
+man pwd
+man -k tcp
+man --help
 man -k cd - display and discribe processing :
 
 apt-cdrom (8)        - APT CD-ROM management utility
@@ -50,6 +53,7 @@ man bash
 man tcsh
 
         polecam aby uzyskać więcej informacji
+
 sudo apt install tcsh
 
 --help – każdy program ma opcję --help lub -h, która wyświetla krótką pomoc
@@ -95,6 +99,10 @@ cd – zmienia aktualny katalog (od 'change directory')
 
 pwd – wypisuje ścieżkę obecnego katalogu (od 'print working directory')
 
+absolute path is path from root till the last point and start with /
+
+relative path from current catalog
+
 ls – listuje katalog
 
         ls – listuje katalog . (ls .)
@@ -105,6 +113,15 @@ ls – listuje katalog
         ls -a – wypisuje również ukryte pliki (czyli te których nazwa zaczyna się kropką)
         ls -R – listuje katalogi rekursywnie (czyli wyświetla również zawartość podkatalogów)
         ls -d – wyświetla tylko nazwy katalogów, tak jak zwyczajnych plików, czyli nie listuje ich zawartości
+        ls -r - wyświetla w odwróconym porządku
+        ls -lt- sort by, and show, ctime (time of last modification of file status information)
+        ls -l - show ctime and sort by name; otherwise: sort by ctime, newest first
+        ls -1 - show in stocks
+        ls plik* - select all files with name "plik"
+        ls *.txt - select all files with .txt
+        ls -1 *.txt - select all files with .txt and show in stock
+        
+
 
 
 cat – wypisuje wszystkie podane mu pliki na standardowe wyjście
