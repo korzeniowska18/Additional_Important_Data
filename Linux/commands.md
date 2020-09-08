@@ -205,6 +205,7 @@ cp – kopiuje plik
         cp plik3 ../katalog/jakis/ – stworzy plik ../katalog/jakis/plik3
         cp pom.* podkatalog/ – skopiuje wszystkie pliki zaczynające się na 'pom.' do ./podkatalog/
         cp plik5 ~/katalog/jakis/pliczek – stworzy plik ~/katalog/jakis/pliczek
+        cp -R /tmp/newday/ /tmp/newday1/   - copy folder newday and rename on newday1
 
 mv – przesuwa plik (tym samym służy również do zmiany nazwy)
 
@@ -663,6 +664,9 @@ X-GNOME-Autostart-Phase=Initialization
 mv plik3.txt /tmp/newday/    - move plik3.txt in newday folder
 mv /tmp/newday/plik3.txt /tmp/newday/newplik.txt   - change plik name if this plik is in the same directory
 mv /tmp/newday/newplik.txt /tmp/newday/plik3.txt   - rename back
+
+cp -R /tmp/newday/ /tmp/newday1/   - copy folder newday and rename on newday1
+mv /tmp/newday1/ /tmp/newday1-2/   - changed folder name
 
 ```
 usefull addition:
