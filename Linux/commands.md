@@ -660,6 +660,14 @@ NoDisplay=true
 X-GNOME-AutoRestart=true
 X-GNOME-Autostart-Phase=Initialization
 
+mv plik3.txt /tmp/newday/    - move plik3.txt in newday folder
+mv /tmp/newday/plik3.txt /tmp/newday/newplik.txt   - change plik name if this plik is in the same directory
+mv /tmp/newday/newplik.txt /tmp/newday/plik3.txt   - rename back
+
+```
+usefull addition:
+
+```
 -a, --all            - do not ignore entries starting with
 -A, --almost-all     - do not list implied . and ..
 --author             - with -l, print the author of each file
