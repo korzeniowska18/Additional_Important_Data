@@ -667,6 +667,12 @@ mv /tmp/newday/newplik.txt /tmp/newday/plik3.txt   - rename back
 
 cp -R /tmp/newday/ /tmp/newday1/   - copy folder newday and rename on newday1
 mv /tmp/newday1/ /tmp/newday1-2/   - changed folder name
+mv *.txt /tmp/newday1-2/   - move files .txt from home directory when inside directory
+rm /tmp/newday1-2/file1.txt   - deleted file file1.txt
+rm -r /tmp/newday             - deleted folder newday with content
+rm /tmp/newday1-2/*txt        - deleted all .txt files from folder newday1-2
+rm -R /tmp/newday1-2/*        - deleted all content from folder newday1-2 (content included txt files and folder)
+
 
 ```
 usefull addition:
