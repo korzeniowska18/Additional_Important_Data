@@ -236,8 +236,14 @@ $ diff copy3.txt copy2.txt    - diff - pokazuje różnice (difference) między d
 1d0
 < Kotek Felek słodko śpi
 
+$ cat FileLoGSys.txt | tail -2 | head -3     - łączenie commend za pomocą znaku | pipe
+   
+[  134.025417] ISO 9660 Extensions: Microsoft Joliet Level 3
+[  134.037834] ISO 9660 Extensions: RRIP_1991A
 
+tab we use for autofill commends
 
+CTRL + C / CTRL + Z - zatrzymują inne commendy /stop commands (pauzuje CTRL+Z - stopped/ CTRL+C - zamyka)
 
 cp – kopiuje plik
 
@@ -888,6 +894,23 @@ wyszukiwanie w VIMie
 ? STRING – szukanie do tyłu
 n – przejście do następnego znalezionego elementu
 SHIFT+n przejście do poprzedniego znalezionego elementu
+
+$ uname -a   - jaki system ze szczegółami
+Linux nata-VirtualBox 5.4.0-45-generic #49~18.04.2-Ubuntu SMP Wed Aug 26 16:29:02 UTC 2020 x86_64 x86_64 x86_64 GNU/Linux
+
+$ uname -s   - jaki system
+Linux
+
+$ uname
+Linux
+
+$ histoty   - list of used commends during logged session
+
+$ clear     - clear content in Terminal
+
+$ wget link do pliku http:   - pobiera plik z internetu 
+
+
 
 ```
 
