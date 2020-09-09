@@ -727,6 +727,22 @@ Modify: 2020-08-07 10:12:01.160989648 +0200
 Change: 2020-09-09 12:42:51.016614116 +0200
  Birth: -
 
+```
+```
+Finding - wyszukiwanie by name, by user name
+
+$ find /home/nata/lte/ -name "*copy*"
+
+/home/nata/lte/copy3.txt
+/home/nata/lte/copy2.txt
+/home/nata/lte/copy5.txt
+/home/nata/lte/copy4.txt
+
+$ find /home/nata/ -name "*newnew*" -user nata
+
+/home/nata/newnew.txt
+
+$ find /home/nata/ -type f -name "*.LOG" -user nata -exec cp {} {}.bak \;
 
 ```
 usefull addition:
