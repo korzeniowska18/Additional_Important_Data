@@ -207,6 +207,15 @@ $ tail FileLoGSys.txt    - wyszukuje kilka ostatnich linii pliku (last few lines
 $ tail -f FileLoGSys.txt   - you can monitor changing (if we open new window of Terminal we can add message
                              and using echo "string" >> FileName.txt see in first window changing
 
+$ grep CPU FileLoGSys.txt   - wyszukiwanie using grep stringu CPU (podkreśla na czerwono CPU)
+
+[    0.003780] CPU MTRRs all blank - virtualized system.
+[    0.112024] ACPI: SSDT 0x00000000DFFF02A0 0001CC (v01 VBOX   VBOXCPUT 00000002 INTL 20100528)
+
+$  grep -i cpu FileLoGSys.txt    - wielkość liter nie ma wtedy znaczenia z -i (letter size is no matter)
+
+$ cat /etc/passwd > FileLoGPass.txt
+
 
 
 cp – kopiuje plik
