@@ -744,6 +744,26 @@ $ find /home/nata/ -name "*newnew*" -user nata
 
 $ find /home/nata/ -type f -name "*.LOG" -user nata -exec cp {} {}.bak \;
 
+$ find /var/cache/debconf/ -name "*.dat"    - find all files with .dat
+
+/var/cache/debconf/templates.dat
+/var/cache/debconf/passwords.dat
+/var/cache/debconf/config.dat
+
+$ find -type f -size -1M -exec ls -sh {} \;
+0 ./copy2.txt
+
+root@nata-VirtualBox:~/lte# find -type f -size -20M -exec ls -sh {} \;
+
+4,0K ./copy3.txt
+0 ./copy2.txt
+4,0K ./copy5.txt
+4,0K ./copy4.txt
+
+$ find /home/nata/lte/ -inum 563035         - find by inode number
+/home/nata/lte/copy3.txt
+
+
 ```
 usefull addition:
 
