@@ -214,7 +214,28 @@ $ grep CPU FileLoGSys.txt   - wyszukiwanie using grep stringu CPU (podkreśla na
 
 $  grep -i cpu FileLoGSys.txt    - wielkość liter nie ma wtedy znaczenia z -i (letter size is no matter)
 
-$ cat /etc/passwd > FileLoGPass.txt
+$ cat /etc/passwd > FileLoGPass.txt    - stworzył / create plik/file
+
+$ cat /home/nata/lte/FileLoGSys.txt /home/nata/lte/FileLoGPass.txt | grep loop   - wyszukiwanie w dwóch plikach
+[    0.509832] Calibrating delay loop (skipped) preset value.. 3600.00 BogoMIPS (lpj=7200008)
+[    1.557634] loop: module loaded
+
+$  cat | grep -c loop /home/nata/lte/FileLoGSys.txt   - how much numbers is this string in file
+2
+
+$ grep -e "loop" FileLoGSys.txt FileLoGPass.txt   - wyszukiwanie w dwóch plikach 
+
+FileLoGSys.txt:[    0.509832] Calibrating delay loop (skipped) preset value.. 3600.00 BogoMIPS (lpj=7200008)
+FileLoGSys.txt:[    1.557634] loop: module loaded
+
+$  md5sum copy3.txt copy4.txt    - md5sum - pokazuje podobieństwa (the same)
+1006873a7b374c73dded27560d53a275  copy3.txt
+1006873a7b374c73dded27560d53a275  copy4.txt
+
+$ diff copy3.txt copy2.txt    - diff - pokazuje różnice (difference) między dwoma plikami
+1d0
+< Kotek Felek słodko śpi
+
 
 
 
