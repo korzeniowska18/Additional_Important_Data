@@ -672,6 +672,60 @@ rm /tmp/newday1-2/file1.txt   - deleted file file1.txt
 rm -r /tmp/newday             - deleted folder newday with content
 rm /tmp/newday1-2/*txt        - deleted all .txt files from folder newday1-2
 rm -R /tmp/newday1-2/*        - deleted all content from folder newday1-2 (content included txt files and folder)
+```
+```
+$ ls -li
+
+total 16244
+ 467027 drwxr-xr-x  6 nata nata     4096 lip  8 15:19   nazwa_pliku   --- 467027(jest "i-node", informacja o węzłu, 
+                                                                          węzeł nie przechowuj nazwy pliku i zawartość)
+ ```
+ ```
+$ stat -f /home/nata/data/
+
+  File: "/home/nata/data/"
+    ID: 6ee6101e0de3ac55 Namelen: 255     Type: ext2/ext3
+Block size: 4096       Fundamental block size: 4096
+Blocks: Total: 7745239    Free: 919523     Available: 520317
+Inodes: Total: 1978592    Free: 1491923
+```
+```
+$ stat /home/nata/data/                       - we can see (sieze, permissions, inode number, link count, type file(directory), group (1000), 
+                                                           user name, data of modify, create, change, access time)
+
+  File: /home/nata/data/
+  Size: 4096      	Blocks: 8          IO Block: 4096   directory
+Device: 801h/2049d	Inode: 442086      Links: 7
+Access: (0755/drwxr-xr-x)  Uid: ( 1000/    nata)   Gid: ( 1000/    nata)
+Access: 2020-09-08 04:56:51.299506798 +0200
+Modify: 2020-08-24 14:05:42.623982728 +0200
+Change: 2020-08-24 14:05:42.623982728 +0200
+ Birth: -
+
+
+```
+```
+Symbolik soft link, symlink, symbol link, soft link
+
+$ ln -s /home/nata/Downloads/znalezione.log /znalezione-fss   - ln tworzy dowiązanie 
+$ ls -lad /znalezione-fss /tmp/
+
+drwxrwxrwt 17 root root 4096 wrz  9 12:31 /tmp/
+lrwxrwxrwx  1 root root   35 wrz  9 12:28 /znalezione-fss -> /home/nata/Downloads/znalezione.log   - strzałka wskauje na symlink i że plik znalezione-fss
+                                                                                                     został skopiowany z znalezione.log
+                                                                                                     
+$ ln znalezione.log znalezione_hard_link       -   hard link - dowiązanie twarde (links: 2)
+
+$ stat znalezione_hard_link 
+
+  File: znalezione_hard_link
+  Size: 43        	Blocks: 8          IO Block: 4096   regular file
+Device: 801h/2049d	Inode: 495491      Links: 2
+Access: (0644/-rw-r--r--)  Uid: ( 1000/    nata)   Gid: ( 1000/    nata)
+Access: 2020-09-09 12:20:25.640290657 +0200
+Modify: 2020-08-07 10:12:01.160989648 +0200
+Change: 2020-09-09 12:42:51.016614116 +0200
+ Birth: -
 
 
 ```
