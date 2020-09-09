@@ -198,6 +198,16 @@ less – wygodne i szybkie przeglądanie plików tekstowych
 touch – zmienia czas dostępu i modyfikacji pliku, lub jeśli plik nie istnieje - tworzy go.
 touch plik
 
+$ dmesg > FileLoGSys.txt     - create new file with logs/ tworzy plik z logami
+
+$ head FileLoGSys.txt    - wyszukuje kilka pierwszych linii (first few lines find/search)
+
+$ tail FileLoGSys.txt    - wyszukuje kilka ostatnich linii pliku (last few lines find/search)
+
+$ tail -f FileLoGSys.txt   - you can monitor changing (if we open new window of Terminal we can add message
+                             and using echo "string" >> FileName.txt see in first window changing
+
+
 
 cp – kopiuje plik
 
@@ -840,6 +850,15 @@ with -l:             - show ctime and sort by name; otherwise: sort by ctime, ne
 -1                     - list one file per line.  Avoid '\n' with -q or -b
 --help                 - display this help and exit
 --version              - output version information and exit
+```
+```
+wyszukiwanie w VIMie
+
+/ STRING – szukanie do przodu
+? STRING – szukanie do tyłu
+n – przejście do następnego znalezionego elementu
+SHIFT+n przejście do poprzedniego znalezionego elementu
+
 ```
 
 Recources:
