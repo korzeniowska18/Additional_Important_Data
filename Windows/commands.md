@@ -57,3 +57,6 @@ over a maximum of 30 hops:
 
   1     2 ms     2 ms     2 ms  192.168.100.1
 ```
+how to check connection with unit:
+
+$ ping 192.168.1.1     # =>(IP address)
